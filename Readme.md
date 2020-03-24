@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Валерий Гайсин](https://up.htmlacademy.ru/adaptive/19/user/204641).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Пермяков ](https://htmlacademy.ru/profile/webben).
 
 ---
 
