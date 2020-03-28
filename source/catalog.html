@@ -20,26 +20,36 @@
             <a href="form.html">Направления</a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">Попутчики</a>
+            <a href="#">Попутчики</a>
           </li>
         </ul>
         <a href="#" class="main-nav__auth">Авторизация</a>
         <ul class="main-nav__contacts">
           <li>
-            <p class="main-nav__phone">
+            <a class="main-nav__phone" href="tel:88005558628">
               8 800 555-86-28
-            </p>
+            </a>
           </li>
           <li>
-            <p class="main-nav__email">
+            <a class="main-nav__email" href="mailto:mail@htmlacademy.ru">
               mail@htmlacademy.ru
-            </p>
+            </a>
           </li>
         </ul>
+        <div class="page-header__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link social__link--facebook">Facebook</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--vkontakte">VK</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--instagram">Instagram</a>
+            </li>
+          </ul>
+        </div>
       </nav>
-      <p class="page-header__slogan">
-        В путешествие с крутыми попутчиками!
-      </p>
     </header>
 
     <main class="page-main">
@@ -53,10 +63,17 @@
         <ul class="travelmates__list">
 
           <li class="travelmates__list-item card-travelmate">
-            <h3 class="card-travelmate__title">Таня Фирсова</h3>
-            <img src="https://via.placeholder.com/70x70" alt="Таня Фирсова" class="card-travelmate__photo">
+            <h3 class="card-travelmate__title">
+              <a href="#" class="card-travelmate__title-link">
+                Таня Фирсова
+              </a>
+            </h3>
+            <a href="#" class="card-travelmate__img-link">
+              <img src="https://via.placeholder.com/70x70" alt="Таня Фирсова" class="card-travelmate__photo">
+            </a>
+            <button class="card-travelmate__btn-like--liked">Лайкнуть</button>
             <p class="card-travelmate__likes">1,5 M лайков</p>
-            <p class="card-travelmate__status">Статус: занята</p>
+            <p class="card-travelmate__status">Статус: offline</p>
             <p class="card-travelmate__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <h4 class="card-travelmate__countries-title">
               Хочет посетить:
@@ -70,8 +87,17 @@
               Транспорт:
             </h4>
             <ul class="travelmate__trasport-list">
-              <li class="travelmate__transport">
+              <li class="card-travelmate__transport">
                 Самолет
+              </li>
+              <li class="card-travelmate__transport--hidden" aria-hidden="true">
+                Автобус
+              </li>
+              <li class="card-travelmate__transport--hidden" aria-hidden="true">
+                Велосипед
+              </li>
+              <li class="card-travelmate__transport--hidden" aria-hidden="true">
+                Пешком
               </li>
             </ul>
             <p class="card-travelmate__level">
@@ -83,10 +109,17 @@
           </li>
 
           <li class="travelmates__list-item card-travelmate">
-            <h3 class="card-travelmate__title">Петя Демин</h3>
-            <img src="https://via.placeholder.com/70x70" alt="Петя Демин" class="card-travelmate__photo">
+            <h3 class="card-travelmate__title">
+              <a href="#" class="card-travelmate__title-link">
+                Петя Демин
+              </a>
+            </h3>
+            <a href="#" class="card-travelmate__img-link">
+              <img src="https://via.placeholder.com/70x70" alt="Петя Демин" class="card-travelmate__photo">
+            </a>
+            <button class="card-travelmate__btn-like">Лайкнуть</button>
             <p class="card-travelmate__likes">1500 лайков</p>
-            <p class="card-travelmate__status">Статус: занят</p>
+            <p class="card-travelmate__status">Статус: offline</p>
             <p class="card-travelmate__tags">#бургер #бар #футбол #концерт #крафт</p>
             <h4 class="card-travelmate__countries-title">
               Хочет посетить:
@@ -98,14 +131,17 @@
             <h4 class="card-travelmate__transport-title">
               Транспорт:
             </h4>
-            <ul class="travelmate__trasport-list">
-              <li class="travelmate__transport">
+            <ul class="card-travelmate__trasport-list">
+              <li class="card-travelmate__transport">
                 Самолет
               </li>
-              <li class="travelmate__transport">
+              <li class="card-travelmate__transport">
                 Автобус
               </li>
-              <li class="travelmate__transport">
+              <li class="card-travelmate__transport--hidden" aria-hidden="true">
+                Велосипед
+              </li>
+              <li class="card-travelmate__transport">
                 Пешком
               </li>
             </ul>
@@ -118,10 +154,17 @@
           </li>
 
           <li class="travelmates__list-item card-travelmate">
-            <h3 class="card-travelmate__title">Марк Смолов</h3>
-            <img src="https://via.placeholder.com/70x70" alt="Марк Смолов" class="card-travelmate__photo">
+            <h3 class="card-travelmate__title">
+              <a href="#" class="card-travelmate__title-link">
+                Марк Смолов
+              </a>
+            </h3>
+            <a href="#" class="card-travelmate__img-link">
+              <img src="https://via.placeholder.com/70x70" alt="Марк Смолов" class="card-travelmate__photo">
+            </a>
+            <button class="card-travelmate__btn-like">Лайкнуть</button>
             <p class="card-travelmate__likes">170 лайков</p>
-            <p class="card-travelmate__status">Статус: занят</p>
+            <p class="card-travelmate__status">Статус: offline</p>
             <p class="card-travelmate__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
             <h4 class="card-travelmate__countries-title">
               Хочет посетить:
@@ -134,12 +177,18 @@
             <h4 class="card-travelmate__transport-title">
               Транспорт:
             </h4>
-            <ul class="travelmate__trasport-list">
-              <li class="travelmate__transport">
+            <ul class="card-travelmate__trasport-list">
+              <li class="card-travelmate__transport">
                 Самолет
               </li>
-              <li class="travelmate__transport">
+              <li class="card-travelmate__transport--hidden" aria-hidden="true">
+                Автобус
+              </li>
+              <li class="card-travelmate__transport">
                 Велосипед
+              </li>
+              <li class="card-travelmate__transport--hidden" aria-hidden="true">
+                Пешком
               </li>
             </ul>
             <p class="card-travelmate__level">
@@ -151,10 +200,17 @@
           </li>
 
           <li class="travelmates__list-item card-travelmate">
-            <h3 class="card-travelmate__title">Лариса Роговая</h3>
-            <img src="https://via.placeholder.com/70x70" alt="Лариса Роговая" class="card-travelmate__photo">
+            <h3 class="card-travelmate__title">
+              <a href="#" class="card-travelmate__title-link">
+                Лариса Роговая
+              </a>
+            </h3>
+            <a href="#" class="card-travelmate__img-link">
+              <img src="https://via.placeholder.com/70x70" alt="Лариса Роговая" class="card-travelmate__photo">
+            </a>
+            <button class="card-travelmate__btn-like">Лайкнуть</button>
             <p class="card-travelmate__likes">23 лайков</p>
-            <p class="card-travelmate__status">Статус: свободна</p>
+            <p class="card-travelmate__status">Статус: online</p>
             <p class="card-travelmate__tags">#образование #карьера #учеба #линкедин</p>
             <h4 class="card-travelmate__countries-title">
               Хочет посетить:
@@ -166,12 +222,18 @@
             <h4 class="card-travelmate__transport-title">
               Транспорт:
             </h4>
-            <ul class="travelmate__trasport-list">
-              <li class="travelmate__transport">
+            <ul class="card-travelmate__trasport-list">
+              <li class="card-travelmate__transport">
                 Самолет
               </li>
-              <li class="travelmate__transport">
+              <li class="card-travelmate__transport">
                 Автобус
+              </li>
+              <li class="card-travelmate__transport--hidden" aria-hidden="true">
+                Велосипед
+              </li>
+              <li class="card-travelmate__transport--hidden" aria-hidden="true">
+                Пешком
               </li>
             </ul>
             <p class="card-travelmate__level">

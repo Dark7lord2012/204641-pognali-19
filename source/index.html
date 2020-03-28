@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="page-header">
-      <a href="index.html" class="page-header__logo">
+      <a href="#" class="page-header__logo">
         <img src="https://via.placeholder.com/100x19" alt="Логотип Погнали?" class="page-header__logo-img">
       </a>
       <h1 class="page-header__title">В путешествие с крутыми попутчиками!</h1>
@@ -14,7 +14,7 @@
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html">О сервисе</a>
+            <a href="#">О сервисе</a>
           </li>
           <li class="site-list__item">
             <a href="form.html">Направления</a>
@@ -26,30 +26,55 @@
         <a href="#" class="main-nav__auth">Авторизация</a>
         <ul class="main-nav__contacts">
           <li>
-            <p class="main-nav__phone">
+            <a class="main-nav__phone" href="tel:88005558628">
               8 800 555-86-28
-            </p>
+            </a>
           </li>
           <li>
-            <p class="main-nav__email">
+            <a class="main-nav__email" href="mailto:mail@htmlacademy.ru">
               mail@htmlacademy.ru
-            </p>
+            </a>
           </li>
         </ul>
+        <div class="page-header__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link social__link--facebook">Facebook</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--vkontakte">VK</a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--instagram">Instagram</a>
+            </li>
+          </ul>
+        </div>
       </nav>
-      <p class="page-header__slogan">
-        В путешествие с крутыми попутчиками!
-      </p>
     </header>
 
     <main class="page-main">
 
       <section class="intro">
         <h2 class="visually-hidden">Введение</h2>
+        <ul class="intro__contacts">
+          <li class="intro__contact">
+            <a class="main-nav__phone" href="tel:88005558628">
+              8 800 555-86-28
+            </a>
+          </li>
+          <li class="intro__contact">
+            <a class="main-nav__email" href="mailto:mail@htmlacademy.ru">
+              mail@htmlacademy.ru
+            </a>
+          </li>
+          <li class="intro__contact">
+            <a href="#" class="main-nav__auth">Авторизация</a>
+          </li>
+        </ul>
         <blockquote>
-          «Лучшее приложение, что я видел в жизни!»
+          <p>«Лучшее приложение, что я видел в жизни!»</p>
+          <cite>Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
         </blockquote>
-        <p><cite>Мурат Эльтазин</cite> главный редактор газеты «гаджетлайф»</p>
         <ol class="intro__steps-list">
           <li class="intro__steps">Выберите направление</li>
           <li class="intro__steps">Изучите идеи путешественников</li>
@@ -66,8 +91,8 @@
           Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими
           идеями путешествий и черпайте вздохновение в чужих.
         </p>
-        <p class="about__description--bold">
-          <b>А если найдете кого-то близкого по духу - скорее зовите в совместный трип!</b>
+        <p class="about__description--accent">
+          А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
         </p>
       </section>
 
@@ -83,17 +108,17 @@
           <li>
             <h3 class="countries__list-title">Тайланд</h3>
             <p class="countries__list-slogan">Джунгли зовут!</p>
-            <p class="countries__list-counter">18381</p>
+            <span class="countries__list-counter">18381</span>
           </li>
           <li>
             <h3 class="countries__list-title">Франция</h3>
             <p class="countries__list-slogan">Трэ бьен, манифик!</p>
-            <p class="countries__list-counter">12518</p>
+            <span class="countries__list-counter">12518</span>
           </li>
           <li>
             <h3 class="countries__list-title">Чехия</h3>
             <p class="countries__list-slogan">Закоулки старой Европы</p>
-            <p class="countries__list-counter">5326</p>
+            <span class="countries__list-counter">5326</span>
           </li>
         </ul>
         <a href="form.html" class="countries__to-all">Показать все</a>
@@ -113,6 +138,9 @@
         <ul class="travelmates__list">
           <li class="travelmates__list-item travelmate">
             <h3 class="travelmate__name">Таня Фирсова</h3>
+            <p class="travelmate__status">
+              Статус: offline
+            </p>
             <img src="https://via.placeholder.com/270x270" alt="" class="travelmate__photo">
             <p class="travelmate__level">
               99 level
@@ -122,9 +150,18 @@
               Хочет посетить:
             </h4>
             <ul class="travelmate__countries">
-              <li class="travelmate__country">Шри-Ланка</li>
-              <li class="travelmate__country">Тайланд</li>
-              <li class="travelmate__country">Сейшелы</li>
+              <li class="travelmate__country">
+                <span class="visually-hidden">Шри-Ланка</span>
+                <img src="https://via.placeholder.com/35x24" alt="Флаг Шри-Ланка" class="travelmate__country-img">
+              </li>
+              <li class="travelmate__country">
+                <span class="visually-hidden">Тайланд</span>
+                <img src="https://via.placeholder.com/35x24" alt="Флаг Тайланда" class="travelmate__country-img">
+              </li>
+              <li class="travelmate__country">
+                <span class="visually-hidden">Сейшелы</span>
+                <img src="https://via.placeholder.com/35x24" alt="Флаг Сейшелы" class="travelmate__country-img">
+              </li>
             </ul>
             <h4 class="visually-hidden">
               Транспорт:
@@ -133,11 +170,23 @@
               <li class="travelmate__transport">
                 Самолет
               </li>
+              <li class="travelmate__transport--hidden" aria-hidden="true">
+                Автобус
+              </li>
+              <li class="travelmate__transport--hidden" aria-hidden="true">
+                Велосипед
+              </li>
+              <li class="travelmate__transport--hidden" aria-hidden="true">
+                Пешком
+              </li>
             </ul>
           </li>
 
           <li class="travelmates__list-item travelmate">
             <h3 class="travelmate__name">Петя Демин</h3>
+            <p class="travelmate__status">
+              Статус: online
+            </p>
             <img src="https://via.placeholder.com/270x270" alt="" class="travelmate__photo">
             <p class="travelmate__level">
               80 level
@@ -147,8 +196,14 @@
               Хочет посетить:
             </h4>
             <ul class="travelmate__countries">
-              <li class="travelmate__country">Бельгия</li>
-              <li class="travelmate__country">Чехия</li>
+              <li class="travelmate__country">
+                <span class="visually-hidden">Бельгия</span>
+                <img src="https://via.placeholder.com/35x24" alt="Флаг Бельгии" class="travelmate__country-img">
+              </li>
+              <li class="travelmate__country">
+                <span class="visually-hidden">Чехия</span>
+                <img src="https://via.placeholder.com/35x24" alt="Флаг Чехии" class="travelmate__country-img">
+              </li>
             </ul>
             <h4 class="visually-hidden">
               Транспорт:
@@ -159,6 +214,9 @@
               </li>
               <li class="travelmate__transport">
                 Автобус
+              </li>
+              <li class="travelmate__transport--hidden" aria-hidden="true">
+                Велосипед
               </li>
               <li class="travelmate__transport">
                 Пешком
@@ -175,47 +233,46 @@
         </h2>
         <ol class="rates__list">
           <li class="rates__list-item">
-            <p>Базовое размещение</p>
-            <p>Бесплатно</p>
+            <p class="rates__text">Базовое размещение</p>
+            <p class="rates__text">Бесплатно</p>
           </li>
           <li class="rates__list-item">
-            <p>Вывод на первых позициях</p>
-            <p>99 руб./мес</p>
+            <p class="rates__text">Вывод на первых позициях</p>
+            <p class="rates__text">99 руб./мес</p>
           </li>
           <li class="rates__list-item">
-            <p>Кастомный цвет карточки</p>
-            <p>59 руб./мес</p>
+            <p class="rates__text">Кастомный цвет карточки</p>
+            <p class="rates__text">59 руб./мес</p>
           </li>
         </ol>
-        <!-- Придумать нужно что с кнопками делать по макету -->
         <button class="rates__btn-open-busyness" type="button">
           Показать тарифы для бизнеса
         </button>
+      </section>
 
-        <h2 class="rate__title">
+      <section class="busyness-rates">
+        <h2 class="busyness-rates__title">
           Бизнес-тарифы
         </h2>
-        <ol class="rates__list">
-          <li class="rates__list-item">
-            <p>Реклама у блоггера</p>
-            <p>300 000 руб./пост</p>
+        <ul class="rates__list">
+          <li class="busyness-rates__list-item">
+            <p class="busyness-rates__text">Реклама у блоггера</p>
+            <p class="busyness-rates__text">300 000 руб./пост</p>
           </li>
-          <li class="rates__list-item">
-            <p>Накрутка подписчиков</p>
-            <p>от 1 руб./шт.</p>
+          <li class="busyness-rates__list-item">
+            <p class="busyness-rates__text">Накрутка подписчиков</p>
+            <p class="busyness-rates__text">от 1 руб./шт.</p>
           </li>
-          <li class="rates__list-item">
-            <p>Лайки от ботов</p>
-            <p>от 20 коп./лайк</p>
+          <li class="busyness-rates__list-item">
+            <p class="busyness-rates__text">Лайки от ботов</p>
+            <p class="busyness-rates__text">от 20 коп./лайк</p>
           </li>
-          <li class="rates__list-item">
-            <p>Ваш продакт-плейсмент</p>
-            <p>Индивидуально</p>
+          <li class="busyness-rates__list-item">
+            <p class="busyness-rates__text">Ваш продакт-плейсмент</p>
+            <p class="busyness-rates__text">Индивидуально</p>
           </li>
-        </ol>
-
-        <!-- Придумать нужно и для этой кнопки (как совместить?..) -->
-        <button class="rates__btn-close-busyness" type="button">
+        </ul>
+        <button class="busyness-rates__btn-close-busyness" type="button">
           Закрыть окно
         </button>
       </section>
@@ -227,9 +284,10 @@
           Тогда скорее <a href="#">авторизуйтесь</a>.
         </p>
         <form class="call-to-action__form" action="https://echo.htmlacademy.ru">
-          <label class="visually-hidden" for="call-to-action__emai-input">E-mail:</label>
-          <input class="call-to-action__emai-input" type="email"
-          id="call-to-action__emai-input" name="email">
+          <label>
+            <span class="visually-hidden">E-mail:</span>
+            <input class="call-to-action__emai-input" type="email" name="email">
+          </label>
           <button class="call-to-action__btn-submit" type="submit">
             <span class="visually-hidden">Отправить E-mail</span>
           </button>
@@ -239,10 +297,14 @@
         </p>
         <ul class="call-to-action__contacts-list">
           <li class="call-to-action__contact">
-            <p>8 800 555-86-28</p>
+            <a class="call-to-action__phone" href="tel:88005558628">
+              8 800 555-86-28
+            </a>
           </li>
           <li class="call-to-action__contact">
-            <p>mail@htmlacademy.ru</p>
+            <a class="call-to-action__email" href="mailto:mail@htmlacademy.ru">
+              mail@htmlacademy.ru
+            </a>
           </li>
         </ul>
       </section>
@@ -254,7 +316,7 @@
         <p class="map-address__address">
           Ул. Большая Конюшенная, 19/8
         </p>
-        <img src="https://via.placeholder.com/320x546" alt="Карта: Ул. Большая Конюшенная, 19/8">
+        <img src="https://via.placeholder.com/320x546" alt="Карта">
       </section>
 
     </main>
