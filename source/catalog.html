@@ -53,9 +53,109 @@
     </header>
 
     <main class="page-main">
-
       <section class="filters">
-        <!-- Скоро тут будет верстка фильтров -->
+        <form action="https://echo.htmlacademy.ru" class="filters__form">
+          <!-- Фильтр по странам тут будет -->
+          <div class="filters__travelmate-filter travelmate-filter">
+            <h2 class="travelmate-filter__title">
+              Подберите идеального попутчика
+            </h2>
+
+            <fieldset class="travelmate-filter__fieldset">
+              <legend class="travelmate-filter__legend">
+                Хобби
+              </legend>
+              <label class="travelmate-filter__label-checkbox">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="gym">
+                Спортзал
+              </label>
+              <label class="travelmate-filter__label-checkbox">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="hookah">
+                Кальян
+              </label>
+              <label class="travelmate-filter__label-checkbox">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="sofa">
+                Диван
+              </label>
+            </fieldset>
+
+            <fieldset class="travelmate-filter__fieldset">
+              <legend class="travelmate-filter__legend">
+                Музыка
+              </legend>
+              <label class="travelmate-filter__label-checkbox">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="hard rock">
+                Тяжелый рок
+              </label>
+              <label class="travelmate-filter__label-checkbox">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="russian rap">
+                Русский рэп
+              </label>
+              <label class="travelmate-filter__label-checkbox">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="eurodance">
+                Евродэнс
+              </label>
+            </fieldset>
+
+            <fieldset class="travelmate-filter__fieldset">
+              <legend class="travelmate-filter__legend">
+                Еда
+              </legend>
+              <label class="travelmate-filter__label-checkbox">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="meat eater">
+                Мясоед
+              </label>
+              <label class="travelmate-filter__label-checkbox">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="proper nutrition">
+                Сидит на ПП
+              </label>
+              <label class="travelmate-filter__label-checkbox">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="vegan">
+                Веган-сыроед
+              </label>
+            </fieldset>
+
+            <!-- Ниже чекбоксы кастомные в виде иконок должны быть -->
+            <fieldset class="travelmate-filter__fieldset">
+              <legend class="travelmate-filter__legend">
+                Транспорт
+              </legend>
+              <label class="travelmate-filter__label-checkbox travelmate-filter__label-checkbox--icons">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="airplane">
+                <span class="visually-hidden">Самолет</span>
+              </label>
+              <label class="travelmate-filter__label-checkbox travelmate-filter__label-checkbox--icons">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="bus">
+                <span class="visually-hidden">Автобус</span>
+              </label>
+              <label class="travelmate-filter__label-checkbox travelmate-filter__label-checkbox--icons">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="bike">
+                <span class="visually-hidden">Велосипед</span>
+              </label>
+              <label class="travelmate-filter__label-checkbox travelmate-filter__label-checkbox--icons">
+                <input type="checkbox" class="travelmate-filter__checkbox" name="walking">
+                <span class="visually-hidden">Пешком</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="travelmate-filter__fieldset">
+              <legend class="travelmate-filter__legend">
+                Левел
+              </legend>
+              <label class="travelmate-filter__label-number">
+                <span class="visually-hidden">От</span>
+                <input type="number" class="travelmate-filter__number" name="start level" min="1" max="100">
+              </label>
+              <label class="travelmate-filter__label-number">
+                <span class="visually-hidden">До</span>
+                <input type="number" class="travelmate-filter__number" name="end level"  min="1" max="100">
+              </label>
+              <!-- Тут должна быть линия с контроллами для выбора диапазона -->
+            </fieldset>
+
+            <button class="travelmate-filter" type="submit">Показать</button>
+          </div>
+        </form>
       </section>
 
       <section class="travelmates">
