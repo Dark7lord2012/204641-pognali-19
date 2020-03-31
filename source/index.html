@@ -58,16 +58,16 @@
         <h2 class="visually-hidden">Введение</h2>
         <ul class="intro__contacts">
           <li class="intro__contact">
-            <a class="main-nav__phone" href="tel:88005558628">
+            <a class="main-nav__phone btn-round btn-round--icon" href="tel:88005558628">
               8 800 555-86-28
             </a>
           </li>
           <li class="intro__contact">
-            <a class="main-nav__email" href="mailto:mail@htmlacademy.ru">
+            <a class="main-nav__email btn-round btn-round--icon" href="mailto:mail@htmlacademy.ru">
               mail@htmlacademy.ru
             </a>
           </li>
-          <li class="intro__contact">
+          <li class="intro__contact btn-round">
             <a href="#" class="main-nav__auth">Авторизация</a>
           </li>
         </ul>
@@ -83,148 +83,156 @@
         </ol>
       </section>
 
-      <section class="about" id="about">
-        <h2 class="about__title">
+      <section class="main-section" id="about">
+        <h2 class="main-section__title">
           О сервисе
         </h2>
-        <p class="about__descripton">
+        <p class="main-section__text">
           Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими
           идеями путешествий и черпайте вздохновение в чужих.
         </p>
-        <p class="about__description--accent">
+        <p class="main-section__text main-section__text--accent">
           А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
         </p>
       </section>
 
-      <section class="countries">
-        <h2 class="countries__title">
+      <section class="main-section">
+        <h2 class="main-section__title">
           Направления
         </h2>
-        <p class="countries__description">
+        <p class="main-section__text">
           Мы не продаем туры и нечего не рекламируем. Люди сами пишут о странах, куда хотели бы
           отправиться и чем можно там заняться.
         </p>
-        <ul class="countries__list">
-          <li>
-            <h3 class="countries__list-title">Тайланд</h3>
-            <p class="countries__list-slogan">Джунгли зовут!</p>
-            <span class="countries__list-counter">18381</span>
-          </li>
-          <li>
-            <h3 class="countries__list-title">Франция</h3>
-            <p class="countries__list-slogan">Трэ бьен, манифик!</p>
-            <span class="countries__list-counter">12518</span>
-          </li>
-          <li>
-            <h3 class="countries__list-title">Чехия</h3>
-            <p class="countries__list-slogan">Закоулки старой Европы</p>
-            <span class="countries__list-counter">5326</span>
-          </li>
-        </ul>
-        <a href="form.html" class="countries__to-all">Показать все</a>
+        <div class="main-section__content countries">
+          <ul class="countries__list">
+            <li>
+              <h3 class="countries__title">Тайланд</h3>
+              <p class="countries__slogan">Джунгли зовут!</p>
+              <span class="countries__counter">18381</span>
+            </li>
+            <li>
+              <h3 class="countries__title">Франция</h3>
+              <p class="countries__slogan">Трэ бьен, манифик!</p>
+              <span class="countries__counter">12518</span>
+            </li>
+            <li>
+              <h3 class="countries__title">Чехия</h3>
+              <p class="countries__slogan">Закоулки старой Европы</p>
+              <span class="countries__counter">5326</span>
+            </li>
+          </ul>
+          <a href="form.html" class="countries__to-all btn-rectangle">Показать все</a>
+        </div>
       </section>
 
-      <section class="travelmates">
-        <h2 class="travelmates__title">
+      <section class="main-section">
+        <h2 class="main-section__title">
           Попутчики
         </h2>
-        <p class="travelmates__description">
+        <p class="main-section__text">
           Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
           Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
         </p>
-        <p class="travelmates__description--bold">
-          <b>Теперь можно легко найти единомышленников!</b>
+        <p class="main-section__text--accent">
+          Теперь можно легко найти единомышленников!
         </p>
-        <ul class="travelmates__list">
-          <li class="travelmates__list-item travelmate">
-            <h3 class="travelmate__name">Таня Фирсова</h3>
-            <p class="travelmate__status">
-              Статус: offline
-            </p>
-            <img src="https://via.placeholder.com/270x270" alt="" class="travelmate__photo">
-            <p class="travelmate__level">
-              99 level
-            </p>
-            <p class="travelmate__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <h4 class="visually-hidden">
-              Хочет посетить:
-            </h4>
-            <ul class="travelmate__countries">
-              <li class="travelmate__country">
-                <span class="visually-hidden">Шри-Ланка</span>
-                <img src="https://via.placeholder.com/35x24" alt="Флаг Шри-Ланка" class="travelmate__country-img">
-              </li>
-              <li class="travelmate__country">
-                <span class="visually-hidden">Тайланд</span>
-                <img src="https://via.placeholder.com/35x24" alt="Флаг Тайланда" class="travelmate__country-img">
-              </li>
-              <li class="travelmate__country">
-                <span class="visually-hidden">Сейшелы</span>
-                <img src="https://via.placeholder.com/35x24" alt="Флаг Сейшелы" class="travelmate__country-img">
-              </li>
-            </ul>
-            <h4 class="visually-hidden">
-              Транспорт:
-            </h4>
-            <ul class="travelmate__trasport-list">
-              <li class="travelmate__transport">
-                Самолет
-              </li>
-              <li class="travelmate__transport--hidden" aria-hidden="true">
-                Автобус
-              </li>
-              <li class="travelmate__transport--hidden" aria-hidden="true">
-                Велосипед
-              </li>
-              <li class="travelmate__transport--hidden" aria-hidden="true">
-                Пешком
-              </li>
-            </ul>
-          </li>
+        <div class="travelmates">
+          <ul class="travelmates__list">
+            <li class="travelmates__list-item">
+              <article class="travelmates__travelmate travelmate">
+                <h3 class="travelmate__name">Таня Фирсова</h3>
+                <p class="travelmate__status">
+                  Статус: offline
+                </p>
+                <img src="https://via.placeholder.com/270x270" alt="" class="travelmate__photo">
+                <p class="travelmate__level level">
+                  99 level
+                </p>
+                <p class="travelmate__tags tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                <h4 class="visually-hidden">
+                  Хочет посетить:
+                </h4>
+                <ul class="travelmate__countries">
+                  <li class="travelmate__country">
+                    <span class="visually-hidden">Шри-Ланка</span>
+                    <img src="https://via.placeholder.com/35x24" alt="Флаг Шри-Ланка" class="travelmate__country-img">
+                  </li>
+                  <li class="travelmate__country">
+                    <span class="visually-hidden">Тайланд</span>
+                    <img src="https://via.placeholder.com/35x24" alt="Флаг Тайланда" class="travelmate__country-img">
+                  </li>
+                  <li class="travelmate__country">
+                    <span class="visually-hidden">Сейшелы</span>
+                    <img src="https://via.placeholder.com/35x24" alt="Флаг Сейшелы" class="travelmate__country-img">
+                  </li>
+                </ul>
+                <h4 class="visually-hidden">
+                  Транспорт:
+                </h4>
+                <ul class="travelmate__trasport-list transport-icons">
+                  <li class="travelmate__transport transport-icons__icon">
+                    Самолет
+                  </li>
+                  <li class="travelmate__transport--hidden transport-icons__icon" aria-hidden="true">
+                    Автобус
+                  </li>
+                  <li class="travelmate__transport--hidden transport-icons__icon" aria-hidden="true">
+                    Велосипед
+                  </li>
+                  <li class="travelmate__transport--hidden transport-icons__icon" aria-hidden="true">
+                    Пешком
+                  </li>
+                </ul>
+              </article>
+            </li>
 
-          <li class="travelmates__list-item travelmate">
-            <h3 class="travelmate__name">Петя Демин</h3>
-            <p class="travelmate__status">
-              Статус: online
-            </p>
-            <img src="https://via.placeholder.com/270x270" alt="" class="travelmate__photo">
-            <p class="travelmate__level">
-              80 level
-            </p>
-            <p class="travelmate__tags">#бургер #бар #футбол #концерт #крафт</p>
-            <h4 class="visually-hidden">
-              Хочет посетить:
-            </h4>
-            <ul class="travelmate__countries">
-              <li class="travelmate__country">
-                <span class="visually-hidden">Бельгия</span>
-                <img src="https://via.placeholder.com/35x24" alt="Флаг Бельгии" class="travelmate__country-img">
-              </li>
-              <li class="travelmate__country">
-                <span class="visually-hidden">Чехия</span>
-                <img src="https://via.placeholder.com/35x24" alt="Флаг Чехии" class="travelmate__country-img">
-              </li>
-            </ul>
-            <h4 class="visually-hidden">
-              Транспорт:
-            </h4>
-            <ul class="travelmate__trasport-list">
-              <li class="travelmate__transport">
-                Самолет
-              </li>
-              <li class="travelmate__transport">
-                Автобус
-              </li>
-              <li class="travelmate__transport--hidden" aria-hidden="true">
-                Велосипед
-              </li>
-              <li class="travelmate__transport">
-                Пешком
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <a href="catalog.html" class="travelmates__to-all">Показать всех</a>
+            <li class="travelmates__list-item">
+              <article class="travelmates__travelmate travelmate">
+                <h3 class="travelmate__name">Петя Демин</h3>
+                <p class="travelmate__status">
+                  Статус: online
+                </p>
+                <img src="https://via.placeholder.com/270x270" alt="" class="travelmate__photo">
+                <p class="travelmate__level level">
+                  80 level
+                </p>
+                <p class="travelmate__tags tags">#бургер #бар #футбол #концерт #крафт</p>
+                <h4 class="visually-hidden">
+                  Хочет посетить:
+                </h4>
+                <ul class="travelmate__countries">
+                  <li class="travelmate__country">
+                    <span class="visually-hidden">Бельгия</span>
+                    <img src="https://via.placeholder.com/35x24" alt="Флаг Бельгии" class="travelmate__country-img">
+                  </li>
+                  <li class="travelmate__country">
+                    <span class="visually-hidden">Чехия</span>
+                    <img src="https://via.placeholder.com/35x24" alt="Флаг Чехии" class="travelmate__country-img">
+                  </li>
+                </ul>
+                <h4 class="visually-hidden">
+                  Транспорт:
+                </h4>
+                <ul class="travelmate__trasport-list transport-icons">
+                  <li class="travelmate__transport transport-icons__icon">
+                    Самолет
+                  </li>
+                  <li class="travelmate__transport transport-icons__icon">
+                    Автобус
+                  </li>
+                  <li class="travelmate__transport--hidden transport-icons__icon" aria-hidden="true">
+                    Велосипед
+                  </li>
+                  <li class="travelmate__transport transport-icons__icon">
+                    Пешком
+                  </li>
+                </ul>
+              </article>
+            </li>
+          </ul>
+          <a href="catalog.html" class="travelmates__to-all btn-rectangle">Показать всех</a>
+        </div>
       </section>
 
       <section class="rates">
@@ -288,7 +296,7 @@
             <span class="visually-hidden">E-mail:</span>
             <input class="call-to-action__emai-input" type="email" name="email">
           </label>
-          <button class="call-to-action__btn-submit" type="submit">
+          <button class="call-to-action__btn-submit btn-rectangle btn-rectangle--icon" type="submit">
             <span class="visually-hidden">Отправить E-mail</span>
           </button>
         </form>
@@ -316,6 +324,7 @@
         <p class="map-address__address">
           Ул. Большая Конюшенная, 19/8
         </p>
+        <button class="map-address__btn btn-round btn-rectangle--icon">Проложить маршрут</button>
         <img src="https://via.placeholder.com/320x546" alt="Карта">
       </section>
 
