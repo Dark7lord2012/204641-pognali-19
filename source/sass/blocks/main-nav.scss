@@ -1,0 +1,23 @@
+.main-nav {
+  background-color: #ffffff;
+  outline: 2px solid #00ff00;
+}
+
+.main-nav__link {
+  color: #192144;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.main-nav__auth {
+  color: #161c35;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.main-nav__phone,
+.main-nav__email {
+  color: #192144;
+  font-size: 16px;
+  line-height: 22px;
+}
