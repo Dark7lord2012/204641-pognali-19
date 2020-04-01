@@ -1,0 +1,43 @@
+.countries {
+  padding: 5px;
+}
+
+.countries__list {
+  list-style: none;
+  padding: 5px;
+  outline: 1px solid red;
+}
+
+.countries__country {
+  margin: 5px;
+  padding: 5px;
+  background-color: #ffffff;
+  color: #161c35;
+  outline: 1px solid green;
+  border-radius: 10px;
+}
+
+.countries__title {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.countries__slogan,
+.countries__counter {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: medium;
+  color: #444444;
+}
+
+.countries__counter {
+  line-height: 30px;
+}
+
+.countries__to-all {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #1d2e5b;
+}

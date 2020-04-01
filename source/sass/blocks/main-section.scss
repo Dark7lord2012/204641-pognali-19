@@ -1,0 +1,39 @@
+.main-section {
+  padding: 10px 20px;
+  margin: 10px 0;
+  outline: 2px solid #00ff00;
+  color: #ffffff;
+  background-color: #192144;
+}
+
+.main-section--light {
+  color: #444444;
+  background-color: #edeff6;
+}
+
+.main-section--about {
+  background-image: url("../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.main-section__title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #ff8d30;
+}
+
+.main-section__text {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+}
+
+.main-section__text--accent {
+  font-weight: bold;
+}
+
+.main-section__content {
+  outline: 1px solid #0000ff;
+}
