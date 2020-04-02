@@ -1,0 +1,22 @@
+.travelmates {
+  padding: 5px;
+  // Тут сложный фон из нескольких картинок будет
+}
+
+.travelmates__list {
+  padding: 15px;
+  list-style: none;
+  outline: 1px solid red;
+}
+
+.travelmates__list-item {
+  outline: 1px solid green;
+  padding: 5px;
+}
+
+.travelmates__to-all {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #1d2e5b;
+}

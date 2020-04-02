@@ -1,0 +1,43 @@
+.card-travelmate {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  color: #1d2e5b;
+}
+
+.card-travelmate__title {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.card-travelmate__title-link {
+  text-decoration: none;
+}
+
+.card-travelmate__photo {
+  border-radius: 50%;
+}
+
+.card-travelmate__likes {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #161c35;
+}
+
+.card-travelmate__tags,
+.card-travelmate__countries-title,
+.card-travelmate__transport-title {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #444444;
+}
+
+.card-travelmate__btn-call {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #161c35;
+}

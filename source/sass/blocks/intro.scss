@@ -1,0 +1,39 @@
+.intro {
+  color: #ffffff;
+  background-color: #161c35;
+  outline: 2px solid #00ff00;
+  background-image: url("../img/traveller-illustration-mobile@1x.png"),
+    url("../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.intro__blockquote {
+  outline: 2px solid blue;
+}
+
+.intro__blockquote-text {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+}
+
+.intro__blockquote-cite {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.intro__steps-list {
+  outline: 2px solid #0000ff;
+  margin: 10px 40px;
+  padding: 20px;
+  background-color: #ffd74b;
+}
+
+.intro__steps {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #161c35;
+}
