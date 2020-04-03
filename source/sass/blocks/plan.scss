@@ -1,0 +1,28 @@
+.plan {
+  outline: 1px solid pink;
+}
+
+.plan__title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #1d2e5b;
+}
+
+.plan__travelmates,
+.plan__dates {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: medium;
+  text-transform: uppercase;
+  color: #1d2e5b;
+}
+
+.plan__btn-change {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: medium;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}

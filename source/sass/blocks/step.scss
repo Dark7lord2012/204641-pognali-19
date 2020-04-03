@@ -1,0 +1,63 @@
+.step {
+  background-color: #ffffff;
+  margin: 5px 25px;
+  padding: 25px;
+}
+
+.step__title {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #1d2e5b;
+}
+
+.step__text {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: #444444;
+}
+
+.step__label-number {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: medium;
+  text-transform: uppercase;
+  color: #1d2e5b;
+}
+
+.step__unit {
+  color: rgba(29, 46, 91, 0.3);
+}
+
+.step__label-checkbox {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: normal;
+  color: #444444;
+}
+
+.step__btn-next-step,
+.step__btn-submit,
+.step__btn-back-step {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #161c35;
+}
+
+.step__textarea-title {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: medium;
+  color: #1d2e5b;
+}
+
+.step__textarea {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: #444444;
+}
