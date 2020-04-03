@@ -1,0 +1,61 @@
+.countries-filter {
+  outline: 2px solid #00ff00;
+}
+
+.countries-filter__title {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #192144;
+  text-transform: uppercase;
+}
+
+.countries-filter__continents {
+  outline: 1px solid #0000ff;
+  list-style: none;
+}
+
+.countries-filter__link {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #192144;
+}
+
+.countries-filter__alphabet {
+  outline: 1px solid #0000ff;
+  list-style: none;
+}
+
+.countries-filter__btn-letter {
+  font-size: 14px;
+  line-height: 18px;
+  color: #1d2e5b;
+  text-transform: uppercase;
+  border: 2px solid #cbced9;
+  background-color: #ffffff;
+}
+
+.countries-filter__btn-letter--active {
+  color: #ffffff;
+  background-color: #1d2e5b;
+}
+
+.countries-filter__countries-list {
+  list-style: none;
+  outline: 1px solid #0000ff;
+}
+
+.countries-filter__country-link {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: #444444;
+}
+
+.countries-filter__btn-close {
+  font-size: 17px;
+  line-height: 30px;
+  color: #161c35;
+  text-transform: uppercase;
+}
