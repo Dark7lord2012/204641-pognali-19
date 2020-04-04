@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Погнали? - Попутчики</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -56,29 +57,28 @@
     <main class="page-main">
       <section class="filters">
         <form action="https://echo.htmlacademy.ru" class="filters__form">
-          <!-- Фильтр по странам тут будет -->
           <div class="filters__countries-filter countries-filter">
-            <h2>Фильтрация по странам</h2>
+            <h2 class="countries-filter__title">Фильтрация по странам</h2>
             <button class="countries-filter__btn-toggle">
               Открыть
             </button>
             <ul class="countries-filter__continents">
               <li class="countries-filter__continent">
-                <a href="#">Европа</a>
+                <a class="countries-filter__link" href="#">Европа</a>
               </li>
               <li class="countries-filter__continent">
-                <a href="#">Азия</a>
+                <a class="countries-filter__link" href="#">Азия</a>
               </li>
               <li class="countries-filter__continent">
-                <a href="#">Америка</a>
+                <a class="countries-filter__link" href="#">Америка</a>
               </li>
               <li class="countries-filter__continent">
-                <a href="#">Острова</a>
+                <a class="countries-filter__link" href="#">Острова</a>
               </li>
             </ul>
             <ul class="countries-filter__alphabet">
               <li class="countries-filter__letter">
-                <button class="countries-filter__btn-letter" type="button">А</button>
+                <button class="countries-filter__btn-letter countries-filter__btn-letter--active" type="button">А</button>
               </li>
               <li class="countries-filter__letter">
                 <button class="countries-filter__btn-letter" type="button">Б</button>
@@ -203,16 +203,16 @@
               </legend>
               <label class="travelmate-filter__label-number">
                 <span class="visually-hidden">От</span>
-                <input type="number" class="travelmate-filter__number" name="start level" min="1" max="100">
+                <input type="number" class="travelmate-filter__number" name="start level" min="1" max="100" value="30">
               </label>
               <label class="travelmate-filter__label-number">
                 <span class="visually-hidden">До</span>
-                <input type="number" class="travelmate-filter__number" name="end level"  min="1" max="100">
+                <input type="number" class="travelmate-filter__number" name="end level"  min="1" max="100" value="100">
               </label>
               <!-- Тут должна быть линия с контроллами для выбора диапазона -->
             </fieldset>
 
-            <button class="travelmate-filter btn-round btn-round--light" type="submit">Показать</button>
+            <button class="travelmate-filter__btn-show btn-round btn-round--light" type="submit">Показать</button>
           </div>
         </form>
       </section>

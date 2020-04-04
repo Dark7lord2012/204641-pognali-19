@@ -1,0 +1,41 @@
+.travelmate-filter {
+  outline: 1px solid #0000ff;
+  background-color: #ffd74b;
+}
+
+.travelmate-filter__title {
+  font-size: 22.5px;
+  line-height: 22.5px;
+  font-weight: bold;
+  color: #1d2e5b;
+}
+
+.travelmate-filter__legend {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #1d2e5b;
+  text-transform: uppercase;
+}
+
+.travelmate-filter__label-checkbox {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: normal;
+  color: #444444;
+}
+
+.travelmate-filter__number {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: medium;
+  color: #1d2e5b;
+}
+
+.travelmate-filter__btn-show {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #161c35;
+  text-transform: uppercase;
+}

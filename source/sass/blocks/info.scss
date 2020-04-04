@@ -1,0 +1,32 @@
+.info {
+  outline: 1px solid #0000ff;
+}
+
+.info__photo {
+  border-radius: 50%;
+}
+
+.info__btn-photo {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #161c35;
+}
+
+.info__legend {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1d2e5b;
+}
+
+.info__textarea-tags {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: #444444;
+  background-color: #edeff6;
+  border: 1px solid #cbced9;
+}
