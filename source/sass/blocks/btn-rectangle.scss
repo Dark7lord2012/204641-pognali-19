@@ -1,0 +1,19 @@
+.btn-rectangle {
+  padding: 24px;
+  font-size: 18px;
+  line-height: 18;
+  font-weight: bold;
+  color: #1d2e5b;
+  background-color: #ffcc33;
+  border-radius: 10px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(#1d2e5b, 0.3);
+  }
+}

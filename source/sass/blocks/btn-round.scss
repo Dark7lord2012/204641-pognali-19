@@ -1,0 +1,21 @@
+.btn-round {
+  padding: 10px 30px;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #161c35;
+  text-align: center;
+  background-color: #ffd74b;
+  border-radius: 25px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(#161c35, 0.3);
+  }
+}

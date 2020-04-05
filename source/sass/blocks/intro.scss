@@ -1,4 +1,5 @@
 .intro {
+  height: 400px; // временно
   color: #ffffff;
   background-color: #161c35;
   outline: 2px solid #00ff00;
@@ -6,6 +7,10 @@
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.intro__contacts {
+  list-style: none;
 }
 
 .intro__blockquote {
@@ -26,7 +31,6 @@
 
 .intro__steps-list {
   outline: 2px solid #0000ff;
-  margin: 10px 40px;
   padding: 20px;
   background-color: #ffd74b;
 }
