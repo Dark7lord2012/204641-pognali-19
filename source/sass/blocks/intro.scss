@@ -1,11 +1,20 @@
 .intro {
+  min-height: 970px;
   color: #ffffff;
   background-color: #161c35;
   outline: 2px solid #00ff00;
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 240px, center -70px;
+}
+
+.intro__title {
+  border: 1px solid red;
+  margin: 0 0 320px;
+  padding: 25px 0 15px;
+  text-align: center;
+
 }
 
 .intro__contacts {
