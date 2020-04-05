@@ -4,6 +4,11 @@
   outline: 2px solid #00ff00;
   color: #ffffff;
   background-color: #192144;
+  border-radius: 0 0 30px 30px;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 0 0 60px 60px;
+  }
 }
 
 .main-section--light {
@@ -12,6 +17,7 @@
 }
 
 .main-section--about {
+  height: 352px;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center center;
