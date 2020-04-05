@@ -1,5 +1,5 @@
 .btn-round {
-  padding: 10px 30px;
+  padding: 10px 20px;
   font-size: 17px;
   line-height: 30px;
   font-weight: bold;
@@ -18,4 +18,10 @@
   &:active {
     color: rgba(#161c35, 0.3);
   }
+}
+
+.btn-round--icon {
+  background-image: url("https://via.placeholder.com/18x18");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
