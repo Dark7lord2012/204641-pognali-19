@@ -4,3 +4,17 @@ body {
   color: #444444;
   font-family: "BloggerSans", "Arial", sans-serif;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+$mobile-width: 320px; // или 270?
+$tablet-width: 768px; // или 688
+$desktop-width: 1440px; // или 1320
+
+.wrapper {
+  margin: 0 25px;
+  background-color: #f00;
+}
