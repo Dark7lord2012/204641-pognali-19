@@ -1,0 +1,24 @@
+.site-list {
+  outline: 1px solid green;
+  padding: 0;
+  background-color: #ffffff;
+  list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    margin-right: auto;
+    background-color: #161c34;
+    color: #ffffff;
+  }
+}
+
+.site-list__item {
+  a {
+    outline: 1px solid red;
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+

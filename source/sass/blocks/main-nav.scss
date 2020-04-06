@@ -1,7 +1,37 @@
 .main-nav {
-  padding: 5px 10px;
-  background-color: #ffffff;
   outline: 2px solid #00ff00;
+
+  @media (min-width: $tablet-width) {
+    width: calc(50% + 25px);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    flex-grow: 1;
+    margin-left: 100px;
+  }
+}
+
+.main-nav__hidden {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    &.main-nav__auth {
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &.main-nav__contacts {
+      display: inline-block;
+    }
+
+    &.main-nav__site-list {
+      display: inline-block;
+    }
+  }
 }
 
 .main-nav__link {
@@ -18,10 +48,30 @@
   font-weight: bold;
 }
 
+.main-nav__contacts {
+  list-style: none;
+  padding: 0;
+}
+
 .main-nav__phone,
 .main-nav__email {
   color: #192144;
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
+}
+
+.main-nav__toggle {
+  width: 25px;
+  height: 11px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  background-image: url("../img/menu.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
