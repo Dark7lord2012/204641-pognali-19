@@ -1,6 +1,4 @@
 .main-section {
-  padding: 10px 20px;
-  margin: 10px 0;
   outline: 2px solid #00ff00;
   color: #ffffff;
   background-color: #192144;
@@ -14,16 +12,43 @@
 .main-section--light {
   color: #444444;
   background-color: #edeff6;
+
+  @media (min-width: $desktop-width) {
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+    }
+
+    .main-section__content {
+      order: -2;
+    }
+
+    .main-section__title {
+      width: 50%;
+      align-self: flex-start;
+    }
+
+    .main-section__text {
+      width: 50%;
+    }
+
+    .main-section__to-all {
+      width: 50%;
+    }
+  }
 }
 
 .main-section--about {
   height: 352px;
+  margin: 0;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .main-section__title {
+  padding: 0 25px;
   font-size: 24px;
   line-height: 24px;
   font-weight: bold;
@@ -31,6 +56,7 @@
 }
 
 .main-section__text {
+  padding: 0 25px;
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
@@ -41,5 +67,12 @@
 }
 
 .main-section__content {
-  outline: 1px solid #0000ff;
+  // outline: 1px solid #0000ff;
+}
+
+.main-section__to-all {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #1d2e5b;
 }
