@@ -11,9 +11,14 @@
   }
 
   @media (min-width: $desktop-width) {
+    position: static;
+    display: flex;
+    align-content: center;
     width: auto;
     flex-grow: 1;
-    margin-left: 100px;
+    padding: 0;
+    background-color: transparent;
+    border: 2px solid pink;
   }
 }
 
@@ -41,6 +46,33 @@
       top: 60px;
       right: 50%;
       transform: translateX(50%);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    .main-nav__auth {
+      position: absolute;
+      display: inline-block;
+      top: 40px;
+      right: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    .main-nav__list,
+    .main-nav__auth,
+    .main-nav__contacts {
+      display: flex;
+      align-self: center;
+      align-content: center;
+    }
+
+    .main-nav__auth {
+      position: relative;
+      top: 0;
+      right: 0;
     }
   }
 }
@@ -84,6 +116,11 @@ width: 100%;
   @media (min-width: $tablet-width) {
     margin-bottom: 140px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    order: 0;
+  }
 }
 
 .main-nav__link {
@@ -104,7 +141,12 @@ width: 100%;
     position: absolute;
     display: inline-block;
     top: 40px;
-    right: 60px;
+    right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    order: 2;
   }
 }
 
@@ -112,6 +154,12 @@ width: 100%;
   list-style: none;
   margin: 50px 0 0;
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    order: 1;
+    margin: 0;
+  }
 }
 
 .main-nav__phone,
@@ -152,10 +200,33 @@ width: 100%;
       height: 68px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background-color: #ff8d30;
+    border-radius: 50%;
+
+    span {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .main-nav__phone::before {
   background-image: url("https://via.placeholder.com/18x18");
+}
+
+.main-nav__email {
+  @media (min-width: $desktop-width) {
+    background-color: #ffbd30;
+  }
 }
 
 .main-nav__email::before {

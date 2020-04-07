@@ -8,9 +8,9 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    flex-grow: 1;
-    justify-content: space-around;
+    align-content: center;
     margin-right: auto;
+    padding: 0;
     background-color: #161c34;
     color: #ffffff;
   }
@@ -24,13 +24,32 @@
     text-transform: uppercase;
   }
 
-
   @media (min-width: $tablet-width) {
     text-align: left;
 
     a {
       font-size: 60px;
       line-height: 70px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    margin: auto 20px;
+
+    a {
+      font-size: 20px;
+      line-height: 30px;
+      color: #ffffff;
+    }
+
+    &:first-child::before {
+      display: block;
+      margin: auto 50px auto 10px;
+      width: 60px;
+      height: 2px;
+      content: "";
+      background-color: #fff;;
     }
   }
 }
