@@ -1,5 +1,5 @@
 .btn-round {
-  padding: 10px 20px;
+  padding: 10px 25px;
   font-size: 17px;
   line-height: 30px;
   font-weight: bold;
@@ -17,6 +17,11 @@
 
   &:active {
     color: rgba(#161c35, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 

@@ -1,8 +1,10 @@
 .site-list {
   outline: 1px solid green;
-  padding: 0;
+  padding: 28px 0 0;
   background-color: #ffffff;
+  color: #192144;
   list-style: none;
+  text-align: center;
 
   @media (min-width: $desktop-width) {
     display: flex;
@@ -17,7 +19,18 @@
 .site-list__item {
   a {
     outline: 1px solid red;
-    color: #ffffff;
+    color: #192144;
     text-decoration: none;
+    text-transform: uppercase;
+  }
+
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+
+    a {
+      font-size: 60px;
+      line-height: 70px;
+    }
   }
 }

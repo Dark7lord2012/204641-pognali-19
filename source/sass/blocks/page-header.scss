@@ -1,4 +1,5 @@
 .page-header {
+  position: relative;
   color: #ffffff;
   outline: 2px solid #ff0000;
   background-color: #161c35;
@@ -19,6 +20,19 @@
   }
 }
 
+.page-header--no-js {
+  .wrapper {
+    padding: 0;
+    margin: 0;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 27px;
+    left: 27px;
+  }
+}
+
 .page-header__title {
   font-size: 36px;
   line-height: 40px;
@@ -27,6 +41,8 @@
 }
 
 .page-header__logo {
+  position: relative;
+  z-index: 5;
   outline: 1px solid #00ff00;
 
   @media (min-width: $tablet-width) {
