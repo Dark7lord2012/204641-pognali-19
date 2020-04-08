@@ -10,22 +10,22 @@
     <header class="page-header page-header--no-js">
       <div class="wrapper">
         <a class="page-header__logo">
-          <img src="img/logo-mobile-white@1x.png" alt="Логотип Погнали?" class="page-header__logo-img" width="100" height="19">
+          <img class="page-header__logo-img" src="img/logo-mobile-white@1x.png" alt="Логотип Погнали?" width="100" height="19">
         </a>
         <h1 class="page-header__title visually-hidden">Главная приложения "Погнали!"</h1>
-        <nav class="main-nav main-nav--no-js main-nav--close">
+        <nav class="main-nav main-nav--no-js">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="#about" class="main-nav__link">О сервисе</a>
+              <a class="main-nav__link" href="#about" >О сервисе</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html" class="main-nav__link">Направления</a>
+              <a class="main-nav__link" href="form.html">Направления</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html" class="main-nav__link">Попутчики</a>
+              <a class="main-nav__link" href="catalog.html" >Попутчики</a>
             </li>
           </ul>
           <a href="#" class="main-nav__auth btn-round">Авторизация</a>
@@ -398,6 +398,7 @@
 
       pageHeader.classList.remove("page-header--no-js");
       mainNav.classList.remove("main-nav--no-js");
+      mainNav.classList.add("main-nav--closed");
 
       mainNavToggle.addEventListener("click", function() {
         if (mainNav.classList.contains("main-nav--closed")) {
