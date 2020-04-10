@@ -29,7 +29,30 @@
   }
 
   .main-section__text {
-    margin-bottom: 64px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 40px)  calc(0% + 80px);
+
+    .main-section__title {
+      margin: 69px 0 59px -2px;
+    }
+
+    .main-section__text {
+      width: 60%;
+      margin-bottom: 108px;
+    }
+
+    br {
+      display: none;
+    }
+
+    .main-section__to-all {
+      margin: 10px 0px 50px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -154,8 +177,17 @@
   }
 }
 
-.main-section__content {
-  // outline: 1px solid #0000ff;
+.main-section__content,
+.main-section__to-all {
+  margin: 0 -24px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 -35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 -70px;
+  }
 }
 
 .main-section__btn-about-more {

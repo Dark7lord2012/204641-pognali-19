@@ -4,16 +4,19 @@
   margin: 0;
   background-color: #ffffff;
   color: #161c35;
-  border: 1px solid green;
   border-radius: 10px;
 
   @media (min-width: $tablet-width) {
     display: flex;
+    min-height: 140px;
+    border-radius: 20px;
+    margin: 0 24px;
+    background-color: transparent;
   }
 }
 
 .country + .country {
-  margin-top: 10px;
+  margin-top: 9px;
 }
 
 .country__info {
@@ -22,13 +25,14 @@
   margin-top: -15px;
   padding: 25px 24px;
   border-radius: 10px;
-  border: 1px solid red;
   background-color: #ffffff;
 
   @media (min-width: $tablet-width) {
     order: 0;
     flex-grow: 1;
-    margin-top: 0;
+    margin: 0;
+    padding: 25px 29px 0;
+    border-radius: 20px 0 0 20px;
   }
 }
 
@@ -39,15 +43,26 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
+    position: static;
     order: 1;
+    width: 186px;
+    height: 140px;
+    border-radius: 0 20px 20px 0;
+    margin-right: 50px;
   }
 }
 
 .country__title {
-  margin: 0;
+  margin: 0 0 2px;
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 4px 0 6px;
+  }
 }
 
 .country__slogan,
@@ -56,18 +71,32 @@
   font-size: 16px;
   line-height: 18px;
   font-weight: medium;
-  color: #444444;
+  color: rgba(#444444, 0.3);
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 17.7px;
+  }
+}
+
+.country__slogan {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .country__counter {
   position: absolute;
-  top: 20px;
-  right: 15px;
+  top: 23px;
+  right: 22px;
   line-height: 30px;
 
   @media (min-width: $tablet-width) {
     position: relative;
     top: auto;
     right: auto;
+    font-size: 20px;
+    padding-left: 28px;
+    line-height: 30px;
   }
 }
