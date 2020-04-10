@@ -17,4 +17,11 @@
   &:active {
     color: rgba(#1d2e5b, 0.3);
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 28px 126px 28px 32px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+  }
 }
