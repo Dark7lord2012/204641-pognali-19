@@ -51,7 +51,7 @@
     }
 
     .main-section__to-all {
-      margin: 10px 0px 50px;
+      margin: 10px 0 50px;
     }
   }
 
@@ -164,7 +164,8 @@
     width: 630px;
     margin-bottom: 39px;
 
-    br, br.main-section__text--tablet {
+    br,
+    br.main-section__text--tablet {
       display: none;
     }
   }
@@ -179,7 +180,7 @@
     line-height: 25px;
   }
 
-  @media (min-width: $desktop-width)  {
+  @media (min-width: $desktop-width) {
     margin-bottom: 86px;
   }
 }
