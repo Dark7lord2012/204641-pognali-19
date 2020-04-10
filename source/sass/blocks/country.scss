@@ -17,6 +17,10 @@
 
 .country + .country {
   margin-top: 9px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 11px;
+  }
 }
 
 .country__info {
@@ -33,6 +37,10 @@
     margin: 0;
     padding: 25px 29px 0;
     border-radius: 20px 0 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 85px 0 30px;
   }
 }
 

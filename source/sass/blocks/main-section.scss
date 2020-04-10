@@ -56,27 +56,34 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 71px;
+
     .wrapper {
       display: flex;
       flex-wrap: wrap;
-      align-content: space-between;
+      flex-direction: column;
+      padding-left: calc(55% + 16px);
+      align-content: flex-start;
     }
 
     .main-section__content {
       order: -2;
+      position: absolute;
+      top: 160px;
+      left: 130px;
     }
 
     .main-section__title {
-      width: 50%;
-      align-self: flex-start;
+      margin-top: 164px;
+      margin-left: 1px;
     }
 
     .main-section__text {
-      width: 50%;
+      width: 350px;
     }
 
     .main-section__to-all {
-      width: 50%;
+      align-self: flex-start;
     }
   }
 }
@@ -154,7 +161,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 620px;
+    width: 630px;
     margin-bottom: 39px;
 
     br, br.main-section__text--tablet {
@@ -199,5 +206,5 @@
 }
 
 .main-section__to-all {
-
+  //
 }
