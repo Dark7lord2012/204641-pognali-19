@@ -1,7 +1,7 @@
 .intro {
   min-height: 950px;
-  color: #ffffff;
-  background-color: #161c35;
+  color: $white;
+  background-color: $dark-two;
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -38,7 +38,7 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: bold;
-  color: #ffffff;
+  color: $white;
   text-align: center;
   box-sizing: border-box;
 
@@ -143,24 +143,24 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
-  color: #161c35;
+  color: $dark-two;
   border-radius: 10px;
   list-style: none;
 
   &:nth-child(1) {
-    background-color: #ff8d30;
+    background-color: $mango;
   }
 
   &:nth-child(2) {
-    background-color: #ffa530;
+    background-color: $mango-three;
   }
 
   &:nth-child(3) {
-    background-color: #ffbd30;
+    background-color: $mango-two;
   }
 
   &:nth-child(4) {
-    background-color: #ffd74b;
+    background-color: $light-gold;
   }
 
   &:last-of-type {

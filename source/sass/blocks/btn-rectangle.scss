@@ -4,18 +4,18 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
-  color: #1d2e5b;
-  background-color: #ffcc33;
+  color: $dark-slate-blue;
+  background-color: $light-gold;
   border-radius: 10px;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    background-color: #ffbd30;
+    background-color: $mango-two;
   }
 
   &:active {
-    color: rgba(#1d2e5b, 0.3);
+    color: rgba($dark-slate-blue, 0.3);
   }
 
   @media (min-width: $tablet-width) {

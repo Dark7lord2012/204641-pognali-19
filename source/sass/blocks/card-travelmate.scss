@@ -1,7 +1,7 @@
 .card-travelmate {
-  background-color: #ffffff;
+  background-color: $white;
   padding: 20px 30px;
-  color: #1d2e5b;
+  color: $dark-slate-blue;
 }
 
 .card-travelmate__title {
@@ -22,7 +22,7 @@
   font-size: 14px;
   line-height: 21px;
   font-weight: bold;
-  color: #161c35;
+  color: $dark-two;
 }
 
 .card-travelmate__tags,
@@ -31,7 +31,7 @@
   font-size: 15px;
   line-height: 18px;
   font-weight: normal;
-  color: #444444;
+  color: $greyish-brown;
 }
 
 .card-travelmate__btn-call {
@@ -39,5 +39,5 @@
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #161c35;
+  color: $dark-two;
 }

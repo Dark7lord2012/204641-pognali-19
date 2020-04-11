@@ -1,8 +1,8 @@
 .site-list {
   outline: 1px solid green;
   padding: 28px 0 0;
-  background-color: #ffffff;
-  color: #192144;
+  background-color: $white;
+  color: $dark-blue-grey;
   list-style: none;
   text-align: center;
 
@@ -11,15 +11,15 @@
     align-content: center;
     margin-right: auto;
     padding: 0;
-    background-color: #161c34;
-    color: #ffffff;
+    background-color: $dark-two;
+    color: $white;
   }
 }
 
 .site-list__item {
   a {
     outline: 1px solid red;
-    color: #192144;
+    color: $dark-blue-grey;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -40,7 +40,7 @@
     a {
       font-size: 20px;
       line-height: 30px;
-      color: #ffffff;
+      color: $white;
     }
 
     &:first-child::before {
@@ -49,7 +49,7 @@
       width: 60px;
       height: 2px;
       content: "";
-      background-color: #ffffff;
+      background-color: $white;
     }
   }
 }

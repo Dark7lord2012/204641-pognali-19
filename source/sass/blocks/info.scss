@@ -11,7 +11,7 @@
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #161c35;
+  color: $dark-two;
 }
 
 .info__legend {
@@ -19,14 +19,14 @@
   line-height: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #1d2e5b;
+  color: $dark-slate-blue;
 }
 
 .info__textarea-tags {
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
-  color: #444444;
-  background-color: #edeff6;
-  border: 1px solid #cbced9;
+  color: $greyish-brown;
+  background-color: $pale-grey;
+  border: 1px solid $cloudy-blue;
 }

@@ -1,8 +1,8 @@
 .page-header {
   position: relative;
-  color: #ffffff;
+  color: $white;
   outline: 2px solid #ff0000;
-  background-color: #161c35;
+  background-color: $dark-two;
   min-height: 73px;
 
   .wrapper {
@@ -37,7 +37,7 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: bold;
-  color: #ffffff;
+  color: $white;
 }
 
 .page-header__logo {
