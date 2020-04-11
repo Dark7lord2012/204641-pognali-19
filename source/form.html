@@ -19,7 +19,7 @@
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a class="main-nav__link" href="#about" >О сервисе</a>
+              <a class="main-nav__link" href="index.html#about" >О сервисе</a>
             </li>
             <li class="site-list__item">
               <a class="main-nav__link">Направления</a>
@@ -292,11 +292,7 @@
       mainNav.classList.add("main-nav--closed");
 
       mainNavToggle.addEventListener("click", function() {
-        if (mainNav.classList.contains("main-nav--closed")) {
-          mainNav.classList.remove("main-nav--closed");
-        } else {
-          mainNav.classList.add("main-nav--closed")
-        }
+        mainNav.classList.toggle("main-nav--closed");
       });
     </script>
   </body>
