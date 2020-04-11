@@ -20,8 +20,8 @@
   position: relative;
   z-index: 1;
   padding-bottom: 30px;
-  color: #444444;
-  background-color: #edeff6;
+  color: $greyish-brown;
+  background-color: $pale-grey;
 
   .main-section__title {
     padding-top: 0;
@@ -120,7 +120,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: bold;
-  color: #ff8d30;
+  color: $mango;
 
   @media (min-width: $tablet-width) {
     margin: 118px 0 41px;
