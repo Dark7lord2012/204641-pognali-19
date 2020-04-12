@@ -3,20 +3,21 @@
   display: flex;
   flex-direction: column;
   align-content: center;
-  max-width: 285px;
+  max-width: 270px;
   background-color: $white;
   color: $dark-slate-blue;
   border-radius: 10px;
 
   @media (min-width: $tablet-width) {
+    max-width: 285px;
     border-radius: 20px;
   }
 }
 
 .travelmate__photo {
   // поменял пути фото из мобильной в десктоп, так как макету требуется фото 270х270, странный момент этот (!)
-  min-width: 270px;
-  min-height: 270px;
+  width: 270px;
+  height: 270px;
   order: -1;
   border-radius: 10px 10px 0 0;
 

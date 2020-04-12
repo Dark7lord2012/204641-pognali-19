@@ -1,9 +1,13 @@
 .travelmates {
   // Тут сложный фон из нескольких картинок будет
-  margin: 63px 0 0;
+  margin: 63px -24px 0;
 
   @media (min-width: $tablet-width) {
-    margin: 60px 0 0;
+    margin: 60px 0px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
@@ -15,6 +19,10 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
@@ -31,9 +39,9 @@
 }
 
 .travelmates__to-all {
-  margin: 20px 0 30px;
+  margin: 20px -24px 30px;
 
   @media (min-width: $tablet-width) {
-    margin: 80px 0 88px;
+    margin: 80px 0px 88px;
   }
 }
