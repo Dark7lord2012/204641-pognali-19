@@ -1,13 +1,80 @@
 .rates {
+  position: relative;
+  padding: 50px 24px 35px;
   color: $greyish-brown;
-  outline: 2px solid green;
+  border-radius: 0 0 30px 30px;
+
+  .rates__title {
+    margin-top: 0;
+    margin-bottom: 45px;
+    width: 50%;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .rates__text {
+    margin-bottom: 0;
+  }
+}
+
+.rates__list {
+  // outline: 1px solid orange;
+  margin: 0 0 28px;
+  padding: 0;
+  padding-right: 21px;
+  list-style: none;
+}
+
+.rates__list-item {
+  border-top: 1px solid rgba($black, 0.05);
+  padding: 10px 0 12px;
+
+  &:last-child {
+    border-bottom: 1px solid rgba($black, 0.05);
+  }
+}
+
+.rates__btn-open-business {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  color: $dark-blue-grey;
+  text-decoration: none;
 }
 
 .rates--business {
+  position: relative;
+  display: none;
   background-color: $white;
+  background-image: none;
+  border-radius: 20px;
+
+  .rates__title {
+    width: 100%;
+  }
 }
 
-.rates__title {
-  font-size: 24px;
+.rates__btn-close-business {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: block;
+  padding: 18px 0;
+  font-size: 16px;
   line-height: 24px;
+  font-weight: bold;
+  color: $dark-slate-blue;
+  background-color: $pale-grey-five;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0 0 20px 20px;
+}
+
+.rates--business-opened {
+  z-index: 5;
+  top: -10px;
+  position: absolute;
+  display: block;
 }
