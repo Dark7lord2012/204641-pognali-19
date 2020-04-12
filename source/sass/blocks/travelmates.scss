@@ -1,11 +1,21 @@
 .travelmates {
   // Тут сложный фон из нескольких картинок будет
-  margin-top: 63px;
+  margin: 63px 0 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 60px 0 0;
+  }
 }
 
 .travelmates__list {
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .travelmates__list-item {
@@ -14,8 +24,16 @@
 
 .travelmates__list-item + .travelmates__list-item {
   margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .travelmates__to-all {
   margin: 20px 0 30px;
+
+  @media (min-width: $tablet-width) {
+    margin: 80px 0 88px;
+  }
 }

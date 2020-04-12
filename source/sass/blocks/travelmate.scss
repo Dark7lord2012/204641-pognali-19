@@ -3,9 +3,14 @@
   display: flex;
   flex-direction: column;
   align-content: center;
+  max-width: 285px;
   background-color: $white;
   color: $dark-slate-blue;
   border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 20px;
+  }
 }
 
 .travelmate__photo {
@@ -14,6 +19,12 @@
   min-height: 270px;
   order: -1;
   border-radius: 10px 10px 0 0;
+
+  @media (min-width: $tablet-width) {
+    min-width: 285px;
+    min-height: 285px;
+    border-radius: 20px 20px 0 0;
+  }
 }
 
 .travelmate__name {
@@ -23,6 +34,13 @@
   line-height: 21px;
   font-weight: bold;
   text-align: center;
+  color: $dark-slate-blue;
+
+  @media (min-width: $tablet-width) {
+    margin: 30px 0 22px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 .travelmate__status {
@@ -34,6 +52,11 @@
   height: 5px;
   background-color: $salmon;
   border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 7px;
+    height: 7px;
+  }
 }
 
 .travelmate__level {
@@ -46,6 +69,11 @@
   height: 60px;
   margin: 0;
   border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    top: 21px;
+    left: 21px;
+  }
 }
 
 .travelmate__tags {
@@ -56,6 +84,12 @@
   color: $greyish-brown;
   font-weight: normal;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 25px;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .travelmate__countries {
@@ -69,6 +103,10 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    top: 275px;
+  }
 }
 
 .travelmate__country {
@@ -87,6 +125,10 @@
   margin-bottom: 18px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .travelmate__transport {

@@ -117,6 +117,25 @@
   .main-section__text {
     margin-bottom: 25px;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-top: -60px;
+    padding-top: 80px;
+
+    .main-section__title{
+      margin-left: -2px;
+      margin-bottom: 57px;
+    }
+
+    .main-section__text {
+      width: 435px;
+      margin-bottom: 40px;
+    }
+
+    .main-section__text--accent {
+      width: 260px;
+    }
+  }
 }
 
 .main-section__title {
