@@ -111,8 +111,12 @@
 }
 
 .main-section--travelmates {
-  margin-top: -10px;
-  border-radius: 10px 30px 0 0;
+  margin-top: -30px;
+  padding-top: 54px;
+
+  .main-section__text {
+    margin-bottom: 25px;
+  }
 }
 
 .main-section__title {

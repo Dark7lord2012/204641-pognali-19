@@ -1,22 +1,21 @@
 .travelmates {
-  padding: 5px;
   // Тут сложный фон из нескольких картинок будет
+  margin-top: 63px;
 }
 
 .travelmates__list {
-  padding: 15px;
+  padding: 0;
   list-style: none;
-  outline: 1px solid red;
 }
 
 .travelmates__list-item {
   outline: 1px solid green;
-  padding: 5px;
+}
+
+.travelmates__list-item + .travelmates__list-item {
+  margin-top: 10px;
 }
 
 .travelmates__to-all {
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: bold;
-  color: $dark-slate-blue;
+  margin: 20px 0 30px;
 }
