@@ -15,6 +15,32 @@
   .rates__text {
     margin-bottom: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 72px 30px 85px;
+    border-radius: 0 0 60px 60px;
+    border-bottom: 1px solid red;
+
+    .rates__title {
+      width: 100%;
+      margin-left: 1px;
+      margin-bottom: 80px;
+      font-size: 45px;
+      line-height: 45px;
+      text-align: center;
+
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .wrapper {
+      padding-left: 0;
+
+      .rates__title {
+        padding-top: 32px;
+      }
+    }
+  }
 }
 
 .rates__list {
@@ -23,6 +49,24 @@
   padding: 0;
   padding-right: 21px;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+    padding-left: 60px;
+    margin-bottom: 67px;
+
+    &--business {
+      padding-left: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 300px;
+
+    &--business {
+      padding: 0;
+    }
+  }
 }
 
 .rates__list-item {
@@ -32,6 +76,23 @@
   &:last-child {
     border-bottom: 1px solid rgba($black, 0.05);
   }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0 14px;
+
+    .rates__text:first-child {
+      width: 90%; //?
+      border: 1px solid green;
+    }
+
+    .rates__text:last-child {
+      flex-grow: 0;
+      border: 1px solid red;
+      text-align: right;
+    }
+  }
 }
 
 .rates__btn-open-business {
@@ -40,6 +101,13 @@
   font-weight: bold;
   color: $dark-blue-grey;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 58px;
+    color: $light-navy;
+  }
 }
 
 .rates--business {
@@ -51,6 +119,10 @@
 
   .rates__title {
     width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-radius: 30px;
   }
 }
 
@@ -70,11 +142,17 @@
   text-transform: uppercase;
   border: none;
   border-radius: 0 0 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 0 0 30px 30px;
+  }
 }
 
 .rates--business-opened {
   z-index: 5;
-  top: -10px;
   position: absolute;
+  top: -10px;
+  right: 50%;
+  transform: translateX(50%);
   display: block;
 }
