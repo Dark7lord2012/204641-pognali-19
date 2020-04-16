@@ -1,6 +1,22 @@
 .page-footer {
-  padding: 5px 20px;
-  outline: 2px solid #ff0000;
+  margin-top: -30px;
+  padding: 40px 0 0;
   background-color: $white;
   color: $greyish-brown;
+  border-radius: 30px 30px 0 0;
+}
+
+.page-footer .wrapper {
+}
+
+.page-footer__logo {
+  display: block;
+  width: 100px;
+  height: 18px;
+  margin: 0 auto 35px;
+}
+
+.page-footer__social {
+  margin-top: 0;
+  margin-bottom: 37px;
 }

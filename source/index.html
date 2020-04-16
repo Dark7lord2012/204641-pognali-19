@@ -292,7 +292,7 @@
             Показать тарифы для бизнеса
           </a>
         </div>
-        <div class="rates rates--business rates--business-opened main-section--light">
+        <div class="rates rates--business main-section--light">
           <div class="wrapper">
             <h2 class="rates__title main-section__title">
               Бизнес-тарифы
@@ -327,12 +327,12 @@
           <h2 class="call-to-action__title">Заинтересовались?</h2>
           <p class="call-to-action__description">
             Зарегистрируетесь, это быстро и бесплатно! Уже зарегистрированы?
-            Тогда скорее <a href="#">авторизуйтесь</a>.
+            Тогда скорее <a class="call-to-action__link" href="#">авторизуйтесь</a>.
           </p>
           <form class="call-to-action__form" action="https://echo.htmlacademy.ru">
-            <label>
+            <label class="call-to-action__email-label">
               <span class="visually-hidden">E-mail:</span>
-              <input class="call-to-action__emai-input" type="email" name="email">
+              <input class="call-to-action__email-input" type="email" name="email" placeholder="Email">
             </label>
             <button class="call-to-action__btn-submit btn-rectangle btn-rectangle--icon" type="submit">
               <span class="visually-hidden">Отправить E-mail</span>
@@ -364,8 +364,8 @@
           <p class="map-address__address">
             Ул. Большая Конюшенная, 19/8
           </p>
-          <button class="map-address__btn btn-rectangle btn-rectangle--icon">Проложить маршрут</button>
-          <img src="https://via.placeholder.com/320x546" alt="Карта">
+          <button class="map-address__btn btn-rectangle btn-rectangle--icon btn-rectangle--bordered">Проложить маршрут</button>
+          <img class="map-address__map" src="https://via.placeholder.com/320x546" alt="Карта">
         </div>
       </section>
 
@@ -374,18 +374,24 @@
     <footer class="page-footer">
       <div class="wrapper">
         <a href="index.html" class="page-footer__logo">
-          <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали?">
+          <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали?" width="100" height="19">
         </a>
-        <div class="page-footer__social social">
-          <ul class="social__list">
+        <div class="page-footer__social">
+          <ul class="social__list social social--footer">
             <li class="social__item">
-              <a href="#" class="social__link social__link--facebook">Facebook</a>
+              <a href="#" class="social__link social__link--facebook">
+                <span class="visually-hidden">Facebook</span>
+              </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--vkontakte">VK</a>
+              <a href="#" class="social__link social__link--vkontakte">
+                <span class="visually-hidden">VK</span>
+              </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--instagram">Instagram</a>
+              <a href="#" class="social__link social__link--instagram">
+                <span class="visually-hidden">Instagram</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -393,7 +399,9 @@
           <b class="copyright__text">
             Разработано
           </b>
-          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
         </div>
       </div>
     </footer>
