@@ -292,7 +292,7 @@
             Показать тарифы для бизнеса
           </a>
         </div>
-        <div class="rates rates--business main-section--light">
+        <div class="rates rates--business main-section--light rates--business-opened">
           <div class="wrapper">
             <h2 class="rates__title main-section__title">
               Бизнес-тарифы
@@ -413,6 +413,7 @@
       var mainNavToggle = document.querySelector(".main-nav__toggle");
       // Переменные блока тарифов
       var btnOpenBusiness = document.querySelector(".btn-open-business");
+      var btnCloseBusiness = document.querySelector(".btn-close-business");
       var modalBusiness = document.querySelector("rates--business");
 
       // Вкл. поддержки шапкой JS
@@ -428,8 +429,11 @@
       // Показать окно бизнес-тарифа
       btnOpenBusiness.addEventListener("click", function() {
         event.preventDefault();
-        alert("hi");
-        modalBusiness.classList.add(".rates--business-opened");
+        modalBusiness.classList.add("rates--business-opened");
+      });
+      // Скрыть окно бизнес-тарифа
+      btnCloseBusiness.addEventListener("click", function() {
+        modalBusiness.classList.remove("rates--business-opened");
       });
     </script>
   </body>
