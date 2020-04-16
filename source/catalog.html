@@ -431,29 +431,40 @@
     </main>
 
     <footer class="page-footer">
-      <a href="index.html" class="page-footer__logo">
-        <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали?">
-      </a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a href="#" class="social__link social__link--facebook">Facebook</a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--vkontakte">VK</a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link social__link--instagram">Instagram</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text">
-          Разработано
-        </b>
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="wrapper">
+        <a href="index.html" class="page-footer__logo">
+          <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали?" width="100" height="19">
+        </a>
+        <div class="page-footer__social">
+          <ul class="social__list social social--footer">
+            <li class="social__item">
+              <a href="#" class="social__link social__link--facebook">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--vkontakte">
+                <span class="visually-hidden">VK</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link social__link--instagram">
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">
+            Разработано
+          </b>
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
+        </div>
       </div>
     </footer>
+
     <script>
       var pageHeader = document.querySelector(".page-header");
       var mainNav = document.querySelector(".main-nav");

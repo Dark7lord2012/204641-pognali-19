@@ -405,11 +405,15 @@
         </div>
       </div>
     </footer>
+
     <script>
       // Переменные шапки
       var pageHeader = document.querySelector(".page-header");
       var mainNav = document.querySelector(".main-nav");
       var mainNavToggle = document.querySelector(".main-nav__toggle");
+      // Переменные блока тарифов
+      var btnOpenBusiness = document.querySelector(".btn-open-business");
+      var modalBusiness = document.querySelector("rates--business");
 
       // Вкл. поддержки шапкой JS
       pageHeader.classList.remove("page-header--no-js");
@@ -419,6 +423,13 @@
       // Откр./закр. шапку
       mainNavToggle.addEventListener("click", function() {
         mainNav.classList.toggle("main-nav--closed");
+      });
+
+      // Показать окно бизнес-тарифа
+      btnOpenBusiness.addEventListener("click", function() {
+        event.preventDefault();
+        alert("hi");
+        modalBusiness.classList.add(".rates--business-opened");
       });
     </script>
   </body>
