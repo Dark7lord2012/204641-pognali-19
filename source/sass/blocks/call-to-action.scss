@@ -17,6 +17,11 @@
   font-weight: bold;
   text-align: center;
   color: $mango;
+
+  @media (min-width: $tablet-width) {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }
 
 .call-to-action__description {
@@ -26,6 +31,11 @@
   line-height: 22px;
   font-weight: 300;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .call-to-action__link {
@@ -68,6 +78,11 @@
   line-height: 22px;
   font-weight: 300;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .call-to-action__contacts-list {
@@ -75,6 +90,11 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .call-to-action__contact {
@@ -91,4 +111,9 @@
   color: $light-gold;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
 }

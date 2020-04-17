@@ -6,6 +6,13 @@
   padding-bottom: 30px;
   background-color: $light-gold;
   border-radius: 0 0 30px 30px;
+
+  @media (min-width: $tablet-width) {
+    .wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
 
 .map-address__address {
@@ -18,11 +25,25 @@
   font-weight: bold;
   text-transform: uppercase;
   color: $dark-blue-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+    margin: 0;
+  }
 }
 
 .map-address__btn {
   width: 100%;
   text-align: left;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
 }
 
 .map-address__map {
