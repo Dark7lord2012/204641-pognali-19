@@ -15,11 +15,15 @@
   }
 
   @media (min-width: $desktop-width) {
+    align-content: center;
     box-sizing: border-box;
     width: 950px;
     min-height: 285;
     padding-left: 285px;
     padding-top: 50px;
+    column-count: 2;
+    column-gap: 20px;
+    column-rule-style: solid;
   }
 }
 
@@ -44,6 +48,7 @@
 
   @media (min-width: $desktop-width) {
     order: 1;
+    align-self: flex-start;
     margin-left: 0;
   }
 }
@@ -163,7 +168,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 300px;
     margin-left: 40px;
+    margin-right: 120px; // сомнительно
   }
 }
 
@@ -175,6 +182,10 @@
 .card-travelmate__countries-title {
   @media (min-width: $tablet-width) {
     order: 7;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
@@ -188,6 +199,14 @@
     display: flex;
     width: 100%;
   }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    flex-direction: column;
+    width: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
 }
 
 .card-travelmate__transport-title {
@@ -199,6 +218,14 @@
 .card-travelmate__country {
   outline: 1px solid green;
   padding-left: 40px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .card-travelmate__transport-list {
@@ -212,6 +239,12 @@
     position: absolute;
     right: 39px;
     flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 6;
+    position: static;
+    flex-direction: row;
   }
 }
 
@@ -248,5 +281,9 @@
     order: 3;
     width: auto;
     margin-left: 255px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 55px;
   }
 }
