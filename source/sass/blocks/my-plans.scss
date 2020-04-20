@@ -1,6 +1,6 @@
 .my-plans {
   outline: 1px solid #0000ff;
-  background-color: #dfe3f0;
+  background-color: $pale-grey-two;
 }
 
 .my-plans__plans-list {
@@ -12,6 +12,6 @@
 .my-plans__plan {
   padding: 25px;
   margin: 25px;
-  background-color: #ffffff;
+  background-color: $white;
 }
 // цифры на макете размечены иначе, и должны ли они быть в контенте или все же в css?

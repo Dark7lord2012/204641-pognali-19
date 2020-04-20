@@ -1,27 +1,237 @@
 .main-nav {
-  padding: 5px 10px;
-  background-color: #ffffff;
-  outline: 2px solid #00ff00;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 73px 25px 0;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 134px 97px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    display: flex;
+    align-content: center;
+    width: auto;
+    flex-grow: 1;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.main-nav--closed {
+  position: absolute;
+  background-color: transparent;
+  padding: 0;
+
+  .main-nav__list,
+  .main-nav__auth,
+  .main-nav__contacts,
+  .main-nav__social {
+    display: none;
+  }
+
+  .main-nav__toggle {
+    top: 30px;
+    right: 25px;
+    width: 25px;
+    height: 11px;
+    background-image: url("../img/menu.svg");
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 60px;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    .main-nav__auth {
+      position: absolute;
+      display: inline-block;
+      top: 40px;
+      right: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    .main-nav__list,
+    .main-nav__auth,
+    .main-nav__contacts {
+      display: flex;
+      align-self: center;
+      align-content: center;
+    }
+
+    .main-nav__auth {
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.main-nav--no-js {
+  position: relative;
+  width: 100%;
+
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 28px;
+  right: 27px;
+  width: 19px;
+  height: 19px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/close.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    top: 56px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  margin-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 140px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    order: 0;
+  }
 }
 
 .main-nav__link {
-  color: #192144;
+  color: $dark-blue-grey;
   font-size: 30px;
   line-height: 36px;
   font-weight: medium;
 }
 
 .main-nav__auth {
-  color: #161c35;
-  font-size: 17px;
-  line-height: 30px;
-  font-weight: bold;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    display: inline-block;
+    top: 40px;
+    right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    order: 2;
+  }
+}
+
+.main-nav__contacts {
+  list-style: none;
+  margin: 50px 0 0;
+  padding: 0;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    order: 1;
+    margin: 0;
+  }
 }
 
 .main-nav__phone,
 .main-nav__email {
-  color: #192144;
+  position: relative;
+  display: block;
+  outline: 1px solid red; // временно
+  padding: 12px 0 12px 60px;
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $dark-blue-grey;
+
+  &::before {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 45px;
+    width: 45px;
+    content: "";
+    border-radius: 50%;
+    background-color: $dark-blue-grey;
+    background-image: url("https://via.placeholder.com/18x18");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 0 20px 91px;
+    font-size: 28px;
+    line-height: 28px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background-color: $mango;
+    border-radius: 50%;
+
+    span {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.main-nav__phone::before {
+  background-image: url("https://via.placeholder.com/18x18");
+}
+
+.main-nav__email {
+  @media (min-width: $desktop-width) {
+    background-color: $mango-two;
+  }
+}
+
+.main-nav__email::before {
+  background-image: url("https://via.placeholder.com/18x11");
+}
+
+.main-nav__social {
+  margin: 40px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 132px 0 95px;
+  }
 }

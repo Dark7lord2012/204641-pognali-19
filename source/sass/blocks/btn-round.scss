@@ -1,0 +1,34 @@
+.btn-round {
+  padding: 10px 40px;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $dark-two;
+  text-align: center;
+  background-color: $light-gold;
+  border-radius: 25px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba($dark-two, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 30px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.btn-round--icon {
+  padding: 10px 20px;
+  background-image: url("https://via.placeholder.com/18x18");
+  background-repeat: no-repeat;
+  background-position: center center;
+}

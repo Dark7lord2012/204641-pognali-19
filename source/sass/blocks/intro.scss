@@ -1,39 +1,213 @@
 .intro {
-  color: #ffffff;
-  background-color: #161c35;
-  outline: 2px solid #00ff00;
+  min-height: 950px;
+  color: $white;
+  background-color: $dark-two;
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: calc(50% + 14px) 146px, center -76px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/traveller-illustration-tablet@1x.png"),
+      url("../img/globe-back-tablet@1x.jpg");
+    background-position: calc(50% + 86px) 270px, center 250px;
+
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 605px;
+    // фон выходит за блок на шапку и обрезается шапкой (нужно придумать решение?)
+    background-image: url("../img/traveller-illustration-desktop@1x.png"),
+      url("../img/globe-back-desktop@1x.jpg");
+    background-position: calc(50% + 99.5px) -36px, center -146px;
+
+    .wrapper {
+      padding-top: 50px;
+    }
+  }
+}
+
+.intro__title {
+  border: 1px solid red;
+  margin: 0 0 235px;
+  padding: 13px 5px 15px;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: bold;
+  color: $white;
+  text-align: center;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    padding: 23px 130px 0;
+    margin-bottom: 89px;
+    order: 1;
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 630px;
+    padding: 8px 66px 0;
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.intro__contacts {
+  display: flex;
+  padding: 0;
+  margin-bottom: 32px;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+  }
 }
 
 .intro__blockquote {
   outline: 2px solid blue;
+  padding: 0 65px 0 25px;
+  margin: 0 0 32px;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    margin-bottom: 198px;
+    padding: 0 34px;
+    order: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    box-sizing: border-box;
+    width: 345px;
+    padding: 22px 0 22px 59px;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
 }
 
 .intro__blockquote-text {
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 44px;
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .intro__blockquote-cite {
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
+  font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }
 
 .intro__steps-list {
+  width: 100%;
+  padding: 0;
   outline: 2px solid #0000ff;
-  margin: 10px 40px;
-  padding: 20px;
-  background-color: #ffd74b;
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    order: 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 97px;
+  }
 }
 
 .intro__steps {
+  padding: 22px 105px 32px 24px;
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
-  color: #161c35;
+  color: $dark-two;
+  border-radius: 10px;
+  list-style: none;
+
+  &:nth-child(1) {
+    background-color: $mango;
+  }
+
+  &:nth-child(2) {
+    background-color: $mango-three;
+  }
+
+  &:nth-child(3) {
+    background-color: $mango-two;
+  }
+
+  &:nth-child(4) {
+    background-color: $light-gold;
+  }
+
+  &:last-of-type {
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 28px 33px 64px 33px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 25%;
+    padding: 26px 33px 31px 33px;
+
+    &:first-child {
+      width: calc(25% + 15px);
+      margin-right: -30px;
+    }
+
+    &:nth-child(2) {
+      width: calc(25% + 42px);
+      margin-right: -28px;
+      padding-left: 30px;
+    }
+
+    &:nth-child(3) {
+      width: calc(25% + 48px);
+      margin-right: -33px;
+      padding-left: 32px;
+    }
+
+    &:nth-child(4) {
+      width: calc(25% - 15px);
+      padding-left: 31px;
+    }
+  }
+}
+
+.intro__steps + .intro__steps {
+  margin-top: -9px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
 }

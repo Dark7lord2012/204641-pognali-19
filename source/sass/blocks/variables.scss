@@ -1,0 +1,47 @@
+// Ширины
+$mobile-width: 320px; // или 270?
+$tablet-width: 768px; // или 688
+$desktop-width: 1440px; // или 1320
+// Цвета
+$white: #ffffff; // Нужен ли, если есть стандртное свойство css white?
+$black: #000000; // Тот же вопрос и этому цвету
+$red: #ff0000; // ?
+
+$pale-grey: #edeff6;
+$pale-grey-two: #dfe3f0;
+$pale-grey-three: #e2e5f1;
+$pale-grey-four: #e2e5f2;
+$pale-grey-five: #f3f4f8;
+
+$light-blue-grey: #d1d7e9;
+$light-blue-grey-five: #d4d9eb;
+
+$cloudy-blue: #cbced9;
+$cloudy-blue-two: #aeb4cb;
+
+$light-navy: #132576;
+
+$dark-two: #161c35;
+$dark-slate-blue: #1d2e5b;
+$dark-slate-blue-two: #101e44;
+
+$dark-blue-grey: #192144;
+$dark-blue-grey-two: #121936;
+
+$light-gold: #ffd74b;
+$mango: #ff8d30;
+$mango-two: #ffbd30;
+$mango-three: #ffa530;
+$macaroni-and-cheese: #f3c72b;
+$very-light-pink: #ffefef;
+$orange-red: #ff5c23;
+$green-apple: #81e31e;
+$very-light-pink-two: #f9eaea;
+$blush: #f47e7e;
+$salmon: #f97676;
+$tomato: #f02323;
+//zeplin про этот цвет ничего не знает пусть он будет...
+$greyish-brown: #444444; // ?
+// Не найденные цвета
+// #d6daed - серо-голубая кнопка "Свернуть" на фильтре по странам страницы Попутчики
+// #b1b4c3 - цвет контура сердечка, которое не лайкнули в странице Попутчики

@@ -6,7 +6,7 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: bold;
-  color: #1d2e5b;
+  color: $dark-slate-blue;
 }
 
 .plan__travelmates,
@@ -15,7 +15,7 @@
   line-height: 14px;
   font-weight: medium;
   text-transform: uppercase;
-  color: #1d2e5b;
+  color: $dark-slate-blue;
 }
 
 .plan__btn-change {
@@ -23,6 +23,6 @@
   line-height: 18px;
   font-weight: medium;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba($black, 0.3);
   text-decoration: none;
 }

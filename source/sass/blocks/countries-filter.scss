@@ -6,7 +6,7 @@
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
-  color: #192144;
+  color: $dark-blue-grey;
   text-transform: uppercase;
 }
 
@@ -19,7 +19,7 @@
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
-  color: #192144;
+  color: $dark-blue-grey;
 }
 
 .countries-filter__alphabet {
@@ -30,15 +30,15 @@
 .countries-filter__btn-letter {
   font-size: 14px;
   line-height: 18px;
-  color: #1d2e5b;
+  color: $dark-slate-blue;
   text-transform: uppercase;
-  border: 2px solid #cbced9;
-  background-color: #ffffff;
+  border: 2px solid $cloudy-blue;
+  background-color: $white;
 }
 
 .countries-filter__btn-letter--active {
-  color: #ffffff;
-  background-color: #1d2e5b;
+  color: $white;
+  background-color: $dark-slate-blue;
 }
 
 .countries-filter__countries-list {
@@ -50,12 +50,12 @@
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
-  color: #444444;
+  color: $greyish-brown;
 }
 
 .countries-filter__btn-close {
   font-size: 17px;
   line-height: 30px;
-  color: #161c35;
+  color: $dark-two;
   text-transform: uppercase;
 }

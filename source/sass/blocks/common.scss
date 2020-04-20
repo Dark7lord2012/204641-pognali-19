@@ -1,6 +1,11 @@
 body {
   margin: 0;
-  background-color: #edeff6;
-  color: #444444;
+  background-color: $pale-grey;
+  color: $greyish-brown;
   font-family: "BloggerSans", "Arial", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
