@@ -1,5 +1,7 @@
 .intro {
   min-height: 950px;
+  margin-top: -20px;
+  padding-top: 20px;
   color: $white;
   background-color: $dark-two;
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
@@ -8,6 +10,8 @@
   background-position: calc(50% + 14px) 146px, center -76px;
 
   @media (min-width: $tablet-width) {
+    margin-top: -60px;
+    padding-top: 60px;
     background-image: url("../img/traveller-illustration-tablet@1x.png"),
       url("../img/globe-back-tablet@1x.jpg");
     background-position: calc(50% + 86px) 270px, center 250px;
