@@ -7,6 +7,7 @@
   color: $dark-two;
   text-align: center;
   background-color: $light-gold;
+  border: none;
   border-radius: 25px;
   text-decoration: none;
 
@@ -24,6 +25,10 @@
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.btn-round--grey {
+  background-color: $light-periwinkle;
 }
 
 .btn-round--icon {
