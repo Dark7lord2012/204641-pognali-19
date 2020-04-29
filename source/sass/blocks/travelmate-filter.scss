@@ -56,6 +56,9 @@
 
   @media (min-width: $tablet-width) {
     margin: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: medium; // не работает?
   }
 }
 
