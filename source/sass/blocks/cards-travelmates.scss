@@ -8,3 +8,25 @@
   padding: 0;
   list-style: none;
 }
+
+
+.cards-travelmates__btn-show-more {
+  outline: 1px solid grey;
+  display: block;
+  width: 100%;
+  margin: 25px 0;
+  text-align: center;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  color: $dark-slate-blue;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    min-height: 27px;
+    margin: 50px 0 55px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
