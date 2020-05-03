@@ -1,6 +1,4 @@
 .info {
-  outline: 1px solid #0000ff;
-
   .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -139,12 +137,11 @@
 }
 
 .info__fieldset--tags {
-  order: -2;
-  width: auto;
-  flex-grow: 1;
-  margin-right: 142px;
-
   @media (min-width: $desktop-width) {
     margin-top: 73px;
+    order: -2;
+    width: auto;
+    flex-grow: 1;
+    margin-right: 142px;
   }
 }

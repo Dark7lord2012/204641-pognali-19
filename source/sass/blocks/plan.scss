@@ -1,12 +1,40 @@
 .plan {
-  outline: 1px solid pink;
+  margin: 0;
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: baseline;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+  }
+}
+
+.plan + .plan {
+  margin-top: 10px;
 }
 
 .plan__title {
+  margin-top: 0;
   font-size: 16px;
   line-height: 16px;
   font-weight: bold;
   color: $dark-slate-blue;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    font-size: 24px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    margin: 0;
+  }
 }
 
 .plan__travelmates,
@@ -14,8 +42,27 @@
   font-size: 14px;
   line-height: 14px;
   font-weight: medium;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
   color: $dark-slate-blue;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: baseline;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+  }
 }
 
 .plan__btn-change {
@@ -25,4 +72,20 @@
   text-transform: uppercase;
   color: rgba($black, 0.3);
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: baseline;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+  }
 }
