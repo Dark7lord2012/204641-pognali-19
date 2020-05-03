@@ -1,10 +1,25 @@
 .step {
   background-color: $white;
-  margin: 5px 25px;
   padding: 25px;
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 45px;
+    border-radius: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 160px; // ?
+    border-radius: 60px;
+  }
+}
+
+.step + .step {
+  margin-top: 10px;
 }
 
 .step__title {
+  margin-top: 0;
   font-size: 20px;
   line-height: 20px;
   font-weight: bold;
@@ -19,6 +34,10 @@
 }
 
 .step__label-number {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   font-size: 16px;
   line-height: 16px;
   font-weight: medium;
@@ -26,25 +45,70 @@
   color: $dark-slate-blue;
 }
 
+.step__btn-number {
+  position: absolute;
+  top: 27px;
+  border: none;
+  background-color: transparent;
+
+  &--plus {
+    right: 5px;
+  }
+
+  &--minus {
+    left: 5px;
+  }
+}
+
+.step__input-number {
+  width: 100%;
+  box-sizing: border-box;
+  height: 43px;
+  font-size: 15px;
+  line-height: 13.5px;
+  font-weight: medium;
+  color: $dark-slate-blue;
+  text-align: center;
+  border: 1px solid $cloudy-blue;
+}
+
 .step__unit {
   color: rgba($dark-slate-blue, 0.3);
 }
 
 .step__label-checkbox {
+  margin-bottom: 27px;
+  padding-left: 35px;
   font-size: 15px;
   line-height: 15px;
   font-weight: normal;
   color: $greyish-brown;
 }
 
+.step__checkbox {
+  display: none; // временно
+}
+
+.step__input-date {
+  // на вид такой сложный по макету, что аж страшно
+  border: 1px solid red;
+  width: 100%;
+  margin: 20px 0;
+}
+
 .step__btn-next-step,
 .step__btn-submit,
 .step__btn-back-step {
+  width: 100%;
   font-size: 17px;
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
   color: $dark-two;
+}
+
+.step__btn-back-step {
+  background-color: transparent;
 }
 
 .step__textarea-title {
