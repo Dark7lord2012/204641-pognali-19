@@ -1,12 +1,43 @@
 .info {
   outline: 1px solid #0000ff;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    .wrapper {
+      justify-content: space-between;
+    }
+  }
+}
+
+.info__level {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0 35px 20px 0;
+  outline: 1px solid red;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+    width: 94px;
+    height: 94px;
+  }
 }
 
 .info__photo {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 }
 
 .info__btn-photo {
+  margin-bottom: 30px;
+  width: 100%;
   font-size: 17px;
   line-height: 30px;
   font-weight: bold;
@@ -14,19 +45,55 @@
   color: $dark-two;
 }
 
+.info__fieldset {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 25px;
+  border: 1px solid $cloudy-blue;
+  border-radius: 10px;
+}
+
 .info__legend {
+  position: absolute;
+  width: auto;
+  top: -10px;
+  right: 50%;
+  transform: translate(50%);
+  margin: 0;
+  padding: 0 15px;
   font-size: 16px;
   line-height: 18px;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
   color: $dark-slate-blue;
+  background-color: $pale-grey;
+
+  @media (min-width: $tablet-width) {
+    top: auto;
+    bottom: -10px;
+    font-size: 20px;
+    font-weight: medium; // посмотри шрифты, medium неадекватен
+    letter-spacing: 2px;
+  }
 }
 
 .info__textarea-tags {
+  width: 100%;
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
   color: $greyish-brown;
-  background-color: $pale-grey;
-  border: 1px solid $cloudy-blue;
+  background-color: transparent;
+  border: none;
+}
+
+.info__fieldset--transport {
+  box-sizing: border-box;
+  min-height: 63px; //временнр
+  @media (min-width: $tablet-width) {
+    order: -1;
+    width: 308px;
+  }
 }
