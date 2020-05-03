@@ -144,11 +144,21 @@
               Добавить план:
             </h2>
             <!-- Индикаторы шагов в виде 3 точек тут -->
+            <ul class="add-plan__indicator-steps-list">
+              <li class="add-plan__indicator-step add-plan__indicator-step--active"></li>
+              <li class="add-plan__indicator-step"></li>
+              <li class="add-plan__indicator-step"></li>
+            </ul>
             <ol class="add-plan__steps-list">
               <li class="add-plan__step step">
                 <h3 class="step__title">
                   Шаг 1. <br> Даты пребывания
                 </h3>
+                <ul class="step__indicator-steps">
+                  <li class="step__indicator-step step__indicator-step--active">Даты</li>
+                  <li class="step__indicator-step">Маршрут</li>
+                  <li class="step__indicator-step">Развлечения</li>
+                </ul>
                 <p class="step__text">
                   Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.
                 </p>
@@ -191,6 +201,11 @@
                 <h3 class="step__title">
                   Шаг 2. <br>Маршрут
                 </h3>
+                <ul class="step__indicator-steps">
+                  <li class="step__indicator-step">Даты</li>
+                  <li class="step__indicator-step step__indicator-step--active">Маршрут</li>
+                  <li class="step__indicator-step">Развлечения</li>
+                </ul>
                 <p class="step__text">
                   Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
                 </p>
@@ -228,6 +243,11 @@
                 <h3 class="step__title">
                   Шаг 3. <br>Развлечения
                 </h3>
+                <ul class="step__indicator-steps">
+                  <li class="step__indicator-step">Даты</li>
+                  <li class="step__indicator-step">Маршрут</li>
+                  <li class="step__indicator-step step__indicator-step--active">Развлечения</li>
+                </ul>
                 <p class="step__text">
                   Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
                 </p>
