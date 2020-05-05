@@ -71,15 +71,15 @@
               80 level
             </p>
             <img src="img/demin-mobile@1x.jpg" alt="Петя Демин?" class="info__photo" width="100" height="100">
-            <button class="info__btn-photo" type="button">
+            <button class="info__btn-photo btn-round btn-round btn-round--pale" type="button">
               Сменить фото
             </button>
-            <fieldset class="info__fieldset">
-              <legend class="info__legend">Теги</legend>
+            <div class="info__fieldset info__fieldset--tags">
+              <h3 class="info__legend">Теги</h3>
               <textarea class="info__textarea-tags">#бургер #бар #футбол #концерт #крафт</textarea>
-            </fieldset>
-            <fieldset class="info__fieldset">
-              <legend class="info__legend">Транспорт</legend>
+            </div>
+            <div class="info__fieldset info__fieldset--transport">
+              <h3 class="info__legend">Транспорт</h3>
               <label class="info__label-checkbox transport-icons">
                 <input type="checkbox" class="info__checkbox transport-icons__icon" name="airplane">
                 <span class="visually-hidden">Самолет</span>
@@ -96,7 +96,7 @@
                 <input type="checkbox" class="info__checkbox transport-icons__icon" name="walking">
                 <span class="visually-hidden">Пешком</span>
               </label>
-            </fieldset>
+            </div>
           </div>
         </section>
 
@@ -144,113 +144,135 @@
               Добавить план:
             </h2>
             <!-- Индикаторы шагов в виде 3 точек тут -->
-            <div class="add-plan__step step">
-              <h3 class="step__title">
-                Шаг 1. <br> Даты пребывания
-              </h3>
-              <p class="step__text">
-                Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.
-              </p>
-              <label class="step__label-number">
-                Ищу попутчиков: <span class="step__unit">чел.</span>
-                <button class="step__btn-number step__btn-number--plus" type="button">
-                  <span class="visually-hidden">Добавить</span>+
-                </button>
-                <input type="number" class="step__input-number" min="1" type="button">
-                <button class="step__btn-number step__btn-number--minus">
-                  <span class="visually-hidden">Убавить</span>-
-                </button>
-              </label>
-              <!-- Ниже перенос временно -->
-              <br>
-              <label class="step__label-number">
-                Длительность: <span class="step__unit">дн.</span>
-                <button class="step__btn-number step__btn-number--plus" type="button">
-                  <span class="visually-hidden">Добавить</span>+
-                </button>
-                <input type="number" class="step__input-number" min="1">
-                <button class="step__btn-number step__btn-number--minus" type="button">
-                  <span class="visually-hidden">Убавить</span>-
-                </button>
-              </label>
-              <!-- Ниже перенос временно -->
-              <br>
-              <label class="step__label-checkbox">
-                <input class="step__checkbox" type="checkbox">
-                Можно с детьми
-              </label>
-              <!-- Тут нужен кастомный календарь, понять бы как его сделать -->
-              <input class="step__input-date" type="date">
-              <button class="step__btn-next-step btn-round" type="button">
-                Следующий шаг
-              </button>
-            </div>
-
-            <div class="add-plan__step step">
-              <h3 class="step__title">
-                Шаг 2. <br>Маршрут
-              </h3>
-              <p class="step__text">
-                Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
-              </p>
-              <select class="step__select" name="country 1" id="1">
-                <option disabled>Выберите страну</option>
-                <option value="Bosnia and Herzegovina" selected>Босния и Герцеговина</option>
-                <option value="Czech">Чехия</option>
-              </select>
-              <!-- Флаг и значок закрытия -->
-              <select class="step__select" name="country 2" id="2">
-                <option disabled>Выберите страну</option>
-                <option value="Bosnia and Herzegovina">Босния и Герцеговина</option>
-                <option value="Czech" selected>Чехия</option>
-              </select>
-              <!-- Флаг и значок закрытия -->
-              <select class="step__select" name="country 3" id="3">
-                <option value="none">Выберите страну</option>
-                <option value="Bosnia and Herzegovina">Босния и Герцеговина</option>
-                <option value="Czech">Чехия</option>
-              </select>
-              <!-- Флаг и значок закрытия -->
-              <button class="step__btn-add-country" type="button">
-                Добавить страну
-              </button>
-              <br>
-              <button class="step__btn-next-step btn-round" type="button">
-                Следующий шаг
-              </button>
-              <button class="step__btn-back-step btn-round" type="button">
-                На шаг назад
-              </button>
-            </div>
-
-            <div class="add-plan__step step">
-              <h3 class="step__title">
-                Шаг 3. <br>Развлечения
-              </h3>
-              <p class="step__text">
-                Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
-              </p>
-              <label class="step__textarea-title">
-                Босния и Герцеговина
-                <!-- Флаг страны -->
+            <ul class="add-plan__indicator-steps-list">
+              <li class="add-plan__indicator-step add-plan__indicator-step--active"></li>
+              <li class="add-plan__indicator-step"></li>
+              <li class="add-plan__indicator-step"></li>
+            </ul>
+            <ol class="add-plan__steps-list">
+              <li class="add-plan__step step">
+                <h3 class="step__title">
+                  Шаг 1. <br> Даты пребывания
+                </h3>
+                <ul class="step__indicator-steps">
+                  <li class="step__indicator-step step__indicator-step--active">Даты</li>
+                  <li class="step__indicator-step">Маршрут</li>
+                  <li class="step__indicator-step">Развлечения</li>
+                </ul>
+                <p class="step__text">
+                  Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.
+                </p>
+                <label class="step__label-number">
+                  Ищу попутчиков: <span class="step__unit">чел.</span>
+                  <button class="step__btn-number step__btn-number--plus" type="button">
+                    <span class="visually-hidden">Добавить</span>+
+                  </button>
+                  <input class="step__input-number" type="number"  min="1" type="button">
+                  <button class="step__btn-number step__btn-number--minus">
+                    <span class="visually-hidden">Убавить</span>-
+                  </button>
+                </label>
+                <!-- Ниже перенос временно -->
                 <br>
-                <textarea class="step__textarea" name="Bosnia and Herzegovina" cols="30" rows="10" placeholder="План действий"></textarea>
-              </label>
-              <br>
-              <label class="step__textarea-title">
-                Чехия
-                <!-- Флаг страны -->
+                <label class="step__label-number">
+                  Длительность: <span class="step__unit">дн.</span>
+                  <button class="step__btn-number step__btn-number--plus" type="button">
+                    <span class="visually-hidden">Добавить</span>+
+                  </button>
+                  <input type="number" class="step__input-number" min="1">
+                  <button class="step__btn-number step__btn-number--minus" type="button">
+                    <span class="visually-hidden">Убавить</span>-
+                  </button>
+                </label>
+                <!-- Ниже перенос временно -->
                 <br>
-                <textarea class="step__textarea" name="Czech" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-              </label>
-              <br>
-              <button class="step__btn-submit btn-round" type="submit">
-                Отправить
-              </button>
-              <button class="step__btn-back-step btn-round" type="button">
-                На шаг назад
-              </button>
-            </div>
+                <label class="step__label-checkbox">
+                  <input class="step__checkbox" type="checkbox">
+                  Можно с детьми
+                </label>
+                <!-- Тут нужен кастомный календарь, понять бы как его сделать -->
+                <input class="step__input-date" type="date">
+                <button class="step__btn-next-step btn-round" type="button">
+                  Следующий шаг
+                </button>
+              </li>
+
+              <li class="add-plan__step step">
+                <h3 class="step__title">
+                  Шаг 2. <br>Маршрут
+                </h3>
+                <ul class="step__indicator-steps">
+                  <li class="step__indicator-step">Даты</li>
+                  <li class="step__indicator-step step__indicator-step--active">Маршрут</li>
+                  <li class="step__indicator-step">Развлечения</li>
+                </ul>
+                <p class="step__text">
+                  Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
+                </p>
+                <select class="step__select" name="country 1" id="1">
+                  <option disabled>Выберите страну</option>
+                  <option value="Bosnia and Herzegovina" selected>Босния и Герцеговина</option>
+                  <option value="Czech">Чехия</option>
+                </select>
+                <!-- Флаг и значок закрытия -->
+                <select class="step__select" name="country 2" id="2">
+                  <option disabled>Выберите страну</option>
+                  <option value="Bosnia and Herzegovina">Босния и Герцеговина</option>
+                  <option value="Czech" selected>Чехия</option>
+                </select>
+                <!-- Флаг и значок закрытия -->
+                <select class="step__select" name="country 3" id="3">
+                  <option value="none">Выберите страну</option>
+                  <option value="Bosnia and Herzegovina">Босния и Герцеговина</option>
+                  <option value="Czech">Чехия</option>
+                </select>
+                <!-- Флаг и значок закрытия -->
+                <button class="step__btn-add-country" type="button">
+                  Добавить страну
+                </button>
+                <br>
+                <button class="step__btn-next-step btn-round" type="button">
+                  Следующий шаг
+                </button>
+                <button class="step__btn-back-step btn-round" type="button">
+                  На шаг назад
+                </button>
+              </li>
+
+              <li class="add-plan__step step">
+                <h3 class="step__title">
+                  Шаг 3. <br>Развлечения
+                </h3>
+                <ul class="step__indicator-steps">
+                  <li class="step__indicator-step">Даты</li>
+                  <li class="step__indicator-step">Маршрут</li>
+                  <li class="step__indicator-step step__indicator-step--active">Развлечения</li>
+                </ul>
+                <p class="step__text">
+                  Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+                </p>
+                <label class="step__textarea-title">
+                  Босния и Герцеговина
+                  <!-- Флаг страны -->
+                  <br>
+                  <textarea class="step__textarea" name="Bosnia and Herzegovina" cols="30" rows="10" placeholder="План действий"></textarea>
+                </label>
+                <br>
+                <label class="step__textarea-title">
+                  Чехия
+                  <!-- Флаг страны -->
+                  <br>
+                  <textarea class="step__textarea" name="Czech" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </label>
+                <br>
+                <button class="step__btn-submit btn-round" type="submit">
+                  Отправить
+                </button>
+                <button class="step__btn-back-step btn-round" type="button">
+                  На шаг назад
+                </button>
+              </li>
+            </ol>
           </div>
         </section>
       </form>

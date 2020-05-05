@@ -1,6 +1,15 @@
 .travelmate-filter {
-  outline: 1px solid #0000ff;
+  padding: 20px 0;
+  margin: 20px;
   background-color: $light-gold;
+  border-radius: 20px;
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    align-self: flex-start;
+    width: 285px;
+    margin: 0 60px 0 auto;
+  }
 }
 
 .travelmate-filter__title {
@@ -8,6 +17,50 @@
   line-height: 22.5px;
   font-weight: bold;
   color: #1d2e5b;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.travelmate-filter__fieldset {
+  outline: 1px solid grey;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.travelmate-filter__checkbox-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.travelmate-filter__transport-icons {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-self: center;
+  }
 }
 
 .travelmate-filter__legend {
@@ -16,6 +69,13 @@
   font-weight: bold;
   color: $dark-slate-blue;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: medium; // не работает?
+  }
 }
 
 .travelmate-filter__label-checkbox {
@@ -25,14 +85,49 @@
   color: $greyish-brown;
 }
 
+.travelmate-filter__level-numbers {
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+    width: 150px;
+    margin: 20px;
+  }
+}
+
+.travelmate-filter__label-number {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+  }
+}
+
 .travelmate-filter__number {
+  box-sizing: border-box;
+  width: 100%;
   font-size: 15px;
   line-height: 15px;
   font-weight: medium;
+  text-align: center;
   color: $dark-slate-blue;
 }
 
+.travelmate-filter__controls-line {
+  width: 100%;
+  height: 10px;
+  margin: 10px 0;
+  background-color: rgba(255, 0, 0, 0.3);
+  outline: 1px solid grey;
+
+  @media (min-width: $tablet-width) {
+    margin: 20px;
+    align-self: center;
+  }
+}
+
 .travelmate-filter__btn-show {
+  width: 100%;
   font-size: 17px;
   line-height: 30px;
   font-weight: bold;

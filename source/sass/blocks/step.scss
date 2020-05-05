@@ -1,14 +1,96 @@
 .step {
   background-color: $white;
-  margin: 5px 25px;
   padding: 25px;
+  border-radius: 10px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 45px;
+    border-radius: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 160px; // ?
+    border-radius: 60px;
+  }
+}
+
+.step + .step {
+  margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 50px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 45px;
+  }
 }
 
 .step__title {
+  margin-top: 0;
   font-size: 20px;
   line-height: 20px;
   font-weight: bold;
   color: $dark-slate-blue;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 50px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.step__indicator-steps {
+  display: none;
+  margin: 0;
+  padding: 0 0 0 50px;
+  list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.step__indicator-step {
+  position: relative;
+  font-size: 20px;
+  line-height: 13.8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+
+  &::before {
+    position: absolute;
+    left: -40px;
+    top: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $steel-grey;
+    content: "";
+  }
+
+  &--active {
+    color: $black;
+
+    &::before {
+      background-color: $dark-slate-blue;
+    }
+  }
+}
+
+.step__indicator-step + .step__indicator-step {
+  margin-top: 26px;
 }
 
 .step__text {
@@ -16,14 +98,80 @@
   line-height: 22px;
   font-weight: normal;
   color: $greyish-brown;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .step__label-number {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
   font-size: 16px;
   line-height: 16px;
+  letter-spacing: 1.6px;
   font-weight: medium;
   text-transform: uppercase;
   color: $dark-slate-blue;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+}
+
+.step__btn-number {
+  position: absolute;
+  top: 35px;
+  border: none;
+  background-color: transparent;
+
+  &--plus {
+    right: 5px;
+  }
+
+  &--minus {
+    left: 5px;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 65px;
+
+    &--plus {
+      right: 15px;
+    }
+
+    &--minus {
+      left: 15px;
+    }
+  }
+}
+
+.step__input-number {
+  width: 100%;
+  box-sizing: border-box;
+  height: 43px;
+  margin: 10px 0;
+  font-size: 15px;
+  line-height: 13.5px;
+  letter-spacing: 1.5px;
+  font-weight: medium;
+  color: $dark-slate-blue;
+  text-align: center;
+  border: 1px solid $cloudy-blue;
+
+  @media (min-width: $tablet-width) {
+    min-height: 70px;
+    margin: 25px 0;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
 }
 
 .step__unit {
@@ -31,23 +179,47 @@
 }
 
 .step__label-checkbox {
+  margin-bottom: 27px;
+  padding-left: 35px;
   font-size: 15px;
   line-height: 15px;
   font-weight: normal;
   color: $greyish-brown;
 }
 
-.step__btn-next-step,
-.step__btn-submit,
-.step__btn-back-step {
-  font-size: 17px;
-  line-height: 30px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: $dark-two;
+.step__checkbox {
+  display: none; // временно
+}
+
+.step__input-date {
+  // на вид такой сложный по макету, что аж страшно
+  border: 1px solid red;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.step__select {
+  width: calc(100% - 53px);
+  height: 42px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% - 160px);
+    height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc(100% - 270px);
+  }
+}
+
+.step__btn-add-country {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .step__textarea-title {
+  width: 100%;
   font-size: 18px;
   line-height: 18px;
   font-weight: medium;
@@ -55,9 +227,34 @@
 }
 
 .step__textarea {
+  width: 100%;
   font-family: inherit;
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
   color: $greyish-brown;
+}
+
+.step__btn-next-step,
+.step__btn-submit,
+.step__btn-back-step {
+  width: 100%;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $dark-two;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 285px; // ?
+    border-radius: 10px;
+  }
+}
+
+.step__btn-back-step {
+  background-color: transparent;
 }

@@ -1,11 +1,11 @@
-.forms {
-  outline: 1px solid #ff0000;
-  padding: 5px;
-}
-
 .forms__title {
   font-size: 20px;
   line-height: 20px;
   font-weight: bold;
   color: $dark-slate-blue;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 50px;
+  }
 }
