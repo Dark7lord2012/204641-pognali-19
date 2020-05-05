@@ -1,4 +1,12 @@
 .page-main {
   margin: 0;
   padding: 0;
+
+  &--catalog {
+    @media (min-width: $desktop-width) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
 }

@@ -1,17 +1,31 @@
 .countries-filter {
   outline: 2px solid #00ff00;
-  padding: 20px 0 0;
+  margin-top: -20px;
+  padding: 40px 0 0;
   background-color: $pale-grey-four;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: center;
+  }
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -60px;
+    padding-top: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 
 .countries-filter__title {
   margin-top: 0;
-  padding: 0 20px;
+  padding: 0 0 0 20px;
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
@@ -21,9 +35,50 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
+
+  @media (min-width: $desktop-width) {
+    order: -1;
+    display: inline;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.countries-filter__show-on-desktop {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
+}
+
+.countries-filter__btn-toggle {
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border: none;
+  background-image: url("../img/filter-close.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: auto;
+    padding-right: 40px;
+    background-position: right center;
+  }
+}
+
+.countries-filter__hide-on-mobile {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
 }
 
 .countries-filter__continents {
+  width: 100%;
   margin: 0;
   padding: 0 20px;
   outline: 1px solid #0000ff;
@@ -35,14 +90,15 @@
   }
 
   @media (min-width: $tablet-width) {
+    order: -1;
     display: flex;
-    width: 100%;
+    width: auto;
   }
 }
 
 .countries-filter__continent {
   @media (min-width: $tablet-width) {
-    margin-right: 20px; // временно
+    margin-right: 40px; // временно, ломается сетка при ширине около 1200px
   }
 }
 
@@ -61,28 +117,24 @@
 .countries-filter__alphabet {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0 20px;
+  width: 100%;
+  margin: 0 20px;
+  padding: 0;
   list-style: none;
 
   @media (min-width: $tablet-width) {
-    width: 430px;
+    width: 70%;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
-.countries-filter__letter {
-  @media (min-width: $tablet-width) {
-    margin: 20px;
-
-    &:nth-child(5n - 4) {
-      margin-left: 0;
-    }
-
-    &:nth-child(5n) {
-      margin-right: 0;
-    }
-  }
-}
+// .countries-filter__letter {
+//   @media (min-width: $tablet-width) {
+//   }
+// }
 
 .countries-filter__btn-letter {
   box-sizing: border-box;
@@ -98,6 +150,7 @@
   background-color: $white;
 
   @media (min-width: $tablet-width) {
+    margin: 22px;
     font-size: 60px;
     line-height: 24px;
     color: rgba($dark-blue-grey, 0.2);
@@ -116,11 +169,43 @@
   }
 }
 
+.countries-filter__countries-lists {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: 1px solid orange;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.countries-filter__countries-lists-item {
+  @media (min-width: $desktop-width) {
+    width: 20%;
+  }
+}
+
 .countries-filter__countries-list {
+  display: none;
+  width: 100%;
   margin: 0;
   padding: 0 20px;
   list-style: none;
   outline: 1px solid #0000ff;
+
+  &--active {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
 
 .countries-filter__country-link {
@@ -136,17 +221,16 @@
   }
 }
 
-.countries-filter__btn-toggle {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  width: 12px;
-  height: 12px;
-  background-color: transparent;
-  border: none;
-  background-image: url("../img/filter-close.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+.countries-filter__countries-list-title {
+  display: none;
+  font-size: 60px;
+  line-height: 24px;
+  font-weight: bold;
+  color: $dark-blue-grey;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
 
 .countries-filter__btn-close {

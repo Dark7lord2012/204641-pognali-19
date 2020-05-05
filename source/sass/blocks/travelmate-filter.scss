@@ -1,7 +1,15 @@
 .travelmate-filter {
-  padding: 20px;
+  padding: 20px 0;
+  margin: 20px;
   background-color: $light-gold;
   border-radius: 20px;
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    align-self: flex-start;
+    width: 285px;
+    margin: 0 60px 0 auto;
+  }
 }
 
 .travelmate-filter__title {
@@ -22,6 +30,10 @@
   @media (min-width: $tablet-width) {
     display: flex;
   }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
 }
 
 .travelmate-filter__checkbox-list {
@@ -32,6 +44,10 @@
   @media (min-width: $tablet-width) {
     display: flex;
     align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
   }
 }
 
