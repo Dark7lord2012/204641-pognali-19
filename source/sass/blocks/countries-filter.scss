@@ -19,6 +19,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    z-index: -1;
     width: 100%;
   }
 }
