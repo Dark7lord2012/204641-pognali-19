@@ -1,5 +1,5 @@
 .btn-rectangle {
-  display: block;
+  display: flex;
   padding: 22.5px 23px;
   font-size: 18px;
   line-height: 18px;
@@ -19,7 +19,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 28px 126px 28px 32px;
+    padding: 28px 32px;
     font-size: 24px;
     line-height: 24px;
     border-radius: 20px;
@@ -29,4 +29,11 @@
 .btn-rectangle--bordered {
   background-color: transparent;
   border: 3px solid black;
+}
+
+.btn-rectangle__arrow {
+  margin-left: 74px;
+  polygon {
+    fill: $dark-slate-blue;
+  }
 }

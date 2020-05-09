@@ -95,20 +95,59 @@
   padding-bottom: 62px;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: calc(50% + 4px) calc(50% + 7px);
+  background-position: calc(50% + 4px) calc(50% + 0px);
   border-radius: 0 0 30px 30px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 89px;
     border-radius: 0 0 60px 60px;
-    background-image: url("../img/about-tablet@1x.png");
-    background-position: calc(50% + 188px) calc(50% + 17px);
+    // background-image: url("../img/about-tablet@1x.png");
+    // background-position: calc(50% + 188px) calc(50% + 13px);
+    background-image: none;
+    padding-right: 0;
+
+    .wrapper {
+      margin-right: 0;  // фон
+      padding-right: 0; // фон
+      background-image: url("../img/about-tablet@1x.png");
+      background-position: calc(50% + 150px) calc(50% + 57px);
+      background-repeat: no-repeat;
+    }
+
+    &::before {
+      // все костыли ради этой дизайнерской штучки! я негодую!
+      z-index: -1;
+      position: absolute;
+      top: 66px;
+      left: 40px;
+      right: 40px;
+      height: 213px;
+      margin: 0 auto;
+      border-radius: 20px;
+      background-color: $dark-blue-grey-four;
+      content: "";
+    }
+
+    .main-section__title {
+      width: 50%; // костыль ради фона?
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-bottom: 163px;
     background-image: url("../img/about-desktop@1x.png");
-    background-position: calc(50% + 345px) calc(50% + 42px);
+    background-position: calc(50% + 345px) calc(50% + 35px);
+
+    &::before {
+      top: 55px;
+      right: auto;
+      left: 60px;
+      width: 213px;
+    }
+
+    .wrapper {
+      background-image: none;
+    }
   }
 }
 
@@ -180,13 +219,13 @@
   color: $mango;
 
   @media (min-width: $tablet-width) {
-    margin: 118px 0 41px;
+    margin: 104px 0 41px;
     font-size: 45px;
     line-height: 45px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 127px 0 60px;
+    margin: 113px 0 59px;
   }
 }
 
@@ -202,7 +241,7 @@
 
   @media (min-width: $tablet-width) {
     box-sizing: border-box;
-    width: 50%;
+    width: calc(50% - 40px);
     padding-right: 7px;
     margin-bottom: 33px;
     font-size: 28px;
@@ -260,5 +299,7 @@
 
   @media (min-width: $tablet-width) {
     display: inline-block;
+    min-width: 274px;
+    box-sizing: border-box;
   }
 }
