@@ -1,9 +1,9 @@
 .page-header {
+  position: relative;
   z-index: 1;
   color: $white;
   background-color: $dark-two;
   border-radius: 0 0 20px 20px;
-  // outline: 1px solid green;
 
   .wrapper {
     display: flex;
@@ -13,6 +13,7 @@
   }
 
   &--index {
+
     .wrapper {
       padding-top: 27px;
     }
@@ -25,6 +26,10 @@
   @media (min-width: $tablet-width) {
     border-radius: 0 0 60px 60px;
 
+    &--index {
+      background-color: $dark-blue-grey; // может шапка на главной все-таки прозрачна?
+    }
+
     .wrapper {
       padding: 46px 0 0;
     }
@@ -32,8 +37,9 @@
 
   @media (min-width: $desktop-width) {
     &--index {
-      // background-color: transparent;
+      background-color: $dark-two; // или нет? шапка динамически меняется и каждый раз отступы менять для интро проблемно
     }
+
     .wrapper {
       align-self: flex-start;
       padding-top: 49px;

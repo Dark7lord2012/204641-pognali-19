@@ -226,7 +226,6 @@
       top: 0;
       left: 0;
       background-color: $mango;
-
     }
 
     &:hover::before {
@@ -246,38 +245,6 @@
     }
   }
 }
-//   .main-nav__phone::before {
-  //     background-image: url("../img/contacts-phone.svg");
-  //   }
-
-  //   @media (min-width: $tablet-width) {
-    //     padding: 20px 0 20px 91px;
-    //     font-size: 28px;
-    //     line-height: 28px;
-
-    //     &::before {
-      //       width: 68px;
-      //       height: 68px;
-      //     }
-      //   }
-
-      //   @media (min-width: $desktop-width) {
-        //     display: inline-block;
-        //     width: 50px;
-        //     height: 50px;
-        //     padding: 0;
-        //     background-color: $mango;
-        //     border-radius: 50%;
-
-        //     span {
-          //       display: none;
-          //     }
-
-          //     &::before {
-            //       display: none;
-            //     }
-            //   }
-            // }
 
 .main-nav__phone-svg,
 .main-nav__email-svg {
