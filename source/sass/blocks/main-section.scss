@@ -57,6 +57,7 @@
 
   @media (min-width: $desktop-width) {
     padding-bottom: 71px;
+    background-position: calc(100% - 60px) 89px;
 
     .wrapper {
       display: flex;
@@ -80,10 +81,15 @@
 
     .main-section__text {
       width: 350px;
+      margin-bottom: 100px;
     }
 
     .main-section__to-all {
       align-self: flex-start;
+      min-width: 274px;
+      box-sizing: border-box;
+      margin-top: 0;
+      margin-left: 3px;
     }
   }
 }
@@ -298,8 +304,9 @@
   display: none;
 
   @media (min-width: $tablet-width) {
-    display: inline-block;
-    min-width: 274px;
+    display: flex;
+    margin-right: auto;
+    width: 274px;
     box-sizing: border-box;
   }
 }

@@ -16,6 +16,12 @@
 
   &:active {
     color: rgba($dark-slate-blue, 0.3);
+
+    .btn-rectangle__arrow {
+      polygon {
+        fill: rgba($dark-slate-blue, 0.3);
+      }
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -32,8 +38,15 @@
 }
 
 .btn-rectangle__arrow {
-  margin-left: 74px;
+  align-self: center;
+  width: 10px;
+  height: 14px;
+  margin-left: auto;
   polygon {
     fill: $dark-slate-blue;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 4px;
   }
 }
