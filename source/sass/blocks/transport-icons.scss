@@ -1,0 +1,29 @@
+.transport-icons {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.transport-icons__icon {
+  outline: 1px solid orange;
+  min-width: 17px;
+  height: 25px;
+  // background-color:  // что за цвет?
+
+  path,
+  ellipse {
+    fill: rgba($dark-slate-blue, 0.15);
+  }
+
+  &--active {
+    path,
+    ellipse {
+      fill: $dark-slate-blue;
+    }
+  }
+}
+
+.transport-icons__icon + .transport-icons__icon {
+  margin-left: 14px;
+}

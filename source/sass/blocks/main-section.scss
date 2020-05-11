@@ -159,15 +159,33 @@
 
 .main-section--travelmates {
   margin-top: -30px;
-  padding-top: 54px;
+  padding-top: 70px;
 
   .main-section__text {
     margin-bottom: 25px;
   }
 
+  .wrapper {
+    position: relative;
+  }
+
+  .main-section__title {
+    &::before {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: -68px;
+      width: 132px;
+      height: 132px;
+      content: "";
+      border-radius: 20px;
+      background-color: $dark-blue-grey-four;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     margin-top: -60px;
-    padding-top: 80px;
+    padding-top: 94px;
 
     .main-section__title {
       margin-left: -2px;
@@ -196,13 +214,17 @@
       align-content: flex-start;
     }
 
+    .main-section__title {
+      margin-top: 145px;
+    }
+
     .main-section__text {
       margin-bottom: 20px;
     }
 
     .main-section__content {
       position: absolute;
-      top: 135px;
+      top: 153px;
       right: -70px;
       order: 3;
       min-width: 630px;
@@ -210,8 +232,9 @@
     }
 
     .main-section__to-all {
-      display: inline-block;
-      width: 200px;
+      display: flex;
+      width: 280px;
+      box-sizing: border-box;
       margin: 0 0 20px;
     }
   }
