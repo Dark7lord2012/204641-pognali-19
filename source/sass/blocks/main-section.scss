@@ -101,7 +101,7 @@
   padding-bottom: 62px;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: calc(50% + 4px) calc(50% + 0px);
+  background-position: calc(50% + 4px) 50%;
   border-radius: 0 0 30px 30px;
 
   @media (min-width: $tablet-width) {

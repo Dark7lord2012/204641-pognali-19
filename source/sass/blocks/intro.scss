@@ -207,10 +207,6 @@
   border-radius: 10px 10px 0 0;
   list-style: none;
 
-  &:last-child {
-    border-radius: 10px;
-  }
-
   &:nth-child(4n - 3) {
     background-color: $mango;
   }
@@ -229,6 +225,7 @@
 
   &:last-child {
     padding-bottom: 24px;
+    border-radius: 10px;
   }
 
   // нумерация
