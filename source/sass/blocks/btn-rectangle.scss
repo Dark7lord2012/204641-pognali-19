@@ -19,7 +19,7 @@
 
     .btn-rectangle__arrow {
       polygon {
-        fill: rgba($dark-slate-blue, 0.3);
+        fill: currentColor;
       }
     }
   }
@@ -44,7 +44,7 @@
   margin-left: auto;
 
   polygon {
-    fill: $dark-slate-blue;
+    fill: currentColor;
   }
 
   @media (min-width: $tablet-width) {

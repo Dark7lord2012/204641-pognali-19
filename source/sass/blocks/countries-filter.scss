@@ -125,6 +125,7 @@
 
   @media (min-width: $tablet-width) {
     width: 70%;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -151,7 +152,9 @@
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    margin: 22px;
+    // margin: 22px;
+    width: 60px;
+    height: 60px;
     font-size: 60px;
     line-height: 24px;
     color: rgba($dark-blue-grey, 0.2);

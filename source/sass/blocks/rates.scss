@@ -4,40 +4,90 @@
   padding: 50px 24px 37px;
   color: $greyish-brown;
   border-radius: 0 0 30px 30px;
+  background-image: none;
 
+  .wrapper {
+    position: relative;
+  }
+
+  // оставил правило, так как сталрое правиль .main-section__title более специфичен
   .rates__title {
     margin-top: 0;
-    margin-bottom: 45px;
-    width: 50%;
-    font-size: 24px;
-    line-height: 24px;
   }
 
   .rates__text {
     margin-bottom: 0;
+    padding-right: 2px;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 72px 30px 85px;
+    padding: 70px 30px 40px;
     border-radius: 0 0 60px 60px;
 
     .rates__title {
-      width: 100%;
-      margin-left: 1px;
-      margin-bottom: 80px;
-      font-size: 45px;
-      line-height: 45px;
-      text-align: center;
+      margin-left: 2px;
+      margin-bottom: 78px;
     }
   }
 
   @media (min-width: $desktop-width) {
+    padding: 104px 100px 140px;
+
     .wrapper {
       padding-left: 0;
 
       .rates__title {
-        padding-top: 32px;
+        padding-top: 0;
+        margin-bottom: 137px;
       }
+    }
+  }
+}
+
+.rates__title {
+  // position: relative;
+  margin-top: 0;
+  margin-bottom: 45px;
+  width: 50%;
+  font-size: 24px;
+  line-height: 24px;
+
+  &::after {
+    position: absolute;
+    top: -13px;
+    right: -22px;
+    width: 99px;
+    height: 99px;
+    content: "";
+    background-image: url("../img/rates@1x.png");
+    background-size: 99px 99px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-left: 1px;
+    margin-bottom: 80px;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: center;
+
+    &::after {
+      top: auto;
+      bottom: 8px;
+      right: 16px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      top: calc(50% - 71px);
+      bottom: auto;
+      right: -26px;
+      width: 198px;
+      height: 198px;
+      background-size: 198px 198px;
     }
   }
 }
@@ -48,11 +98,12 @@
   padding: 0;
   padding-right: 21px;
   list-style: none;
+  counter-reset: rate-list-item;
 
   @media (min-width: $tablet-width) {
     padding-right: 0;
     padding-left: 60px;
-    margin-bottom: 67px;
+    margin-bottom: 60px;
 
     &--business {
       padding-left: 0;
@@ -61,6 +112,10 @@
 
   @media (min-width: $desktop-width) {
     padding-right: 300px;
+    outline: 1px solid red;
+    width: calc(100% - 242px);
+    padding-right: 0;
+    box-sizing: border-box;
 
     &--business {
       padding: 0;
@@ -69,11 +124,54 @@
 }
 
 .rates__list-item {
+  position: relative;
   border-top: 1px solid rgba($black, 0.05);
   padding: 10px 0 12px;
 
   &:last-child {
     border-bottom: 1px solid rgba($black, 0.05);
+  }
+
+  &::after {
+    position: absolute;
+    top: 3px;
+    right: -44px;
+    display: block;
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+    padding: 10px 13px;
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: normal;
+    color: $white;
+    counter-increment: rate-list-item;
+    content: counter(rate-list-item);
+    background-color: $mango;
+    border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      right: auto;
+      top: -2px;
+      left: -90px;
+      width: 67px;
+      height: 67px;
+      padding: 21px 25px 25px;
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+
+  &:nth-child(3n - 2)::after {
+    background-color: $mango;
+  }
+
+  &:nth-child(3n - 1)::after {
+    background-color: $mango-two;
+  }
+
+  &:nth-child(3n)::after {
+    background-color: $light-gold;
   }
 
   @media (min-width: $tablet-width) {
@@ -94,6 +192,12 @@
   }
 }
 
+.rates__list-item + .rates__list-item {
+  @media (min-width: $tablet-width) {
+    margin-top: 5px;
+  }
+}
+
 .rates__btn-open-business {
   font-size: 16px;
   line-height: 16px;
@@ -102,10 +206,35 @@
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
+    display: flex;
     font-size: 20px;
     line-height: 20px;
-    padding-left: 58px;
+    margin-left: -8px;
     color: $light-navy;
+  }
+
+  @media (min-width: $tablet-width) {
+  }
+}
+
+.rates__btn-svg {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: -24px;
+    left: -22px;
+    display: block;
+    background-color: $pale-grey-four;
+    padding: 22px 25px 24px;
+    border-radius: 50%; // несчастная рамка обрезает svg (?)
+  }
+}
+
+.rates__btn-test {
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    margin: auto 0;
   }
 }
 
