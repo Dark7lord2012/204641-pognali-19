@@ -1,5 +1,5 @@
 .btn-rectangle {
-  display: block;
+  display: flex;
   padding: 22.5px 23px;
   font-size: 18px;
   line-height: 18px;
@@ -16,10 +16,16 @@
 
   &:active {
     color: rgba($dark-slate-blue, 0.3);
+
+    .btn-rectangle__arrow {
+      polygon {
+        fill: rgba($dark-slate-blue, 0.3);
+      }
+    }
   }
 
   @media (min-width: $tablet-width) {
-    padding: 28px 126px 28px 32px;
+    padding: 28px 32px;
     font-size: 24px;
     line-height: 24px;
     border-radius: 20px;
@@ -29,4 +35,19 @@
 .btn-rectangle--bordered {
   background-color: transparent;
   border: 3px solid black;
+}
+
+.btn-rectangle__arrow {
+  align-self: center;
+  width: 10px;
+  height: 14px;
+  margin-left: auto;
+
+  polygon {
+    fill: $dark-slate-blue;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 4px;
+  }
 }

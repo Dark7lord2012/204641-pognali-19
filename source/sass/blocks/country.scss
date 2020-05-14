@@ -8,10 +8,12 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    max-width: 100%;
     min-height: 140px;
     border-radius: 20px;
     margin: 0 24px;
     background-color: transparent;
+    box-sizing: border-box;
   }
 }
 
@@ -34,6 +36,7 @@
   @media (min-width: $tablet-width) {
     order: 0;
     flex-grow: 1;
+    width: calc(100% - 300px); // ради переполнения
     margin: 0;
     padding: 25px 29px 0;
     border-radius: 20px 0 0 20px;
@@ -47,21 +50,22 @@
 .country__photo {
   position: relative;
   z-index: 0;
+  width: 100%;
   border-radius: 10px;
   margin: 0;
 
   @media (min-width: $tablet-width) {
     position: static;
     order: 1;
-    width: 186px;
-    height: 140px;
+    width: 185px;
+    min-height: 140px; // но фото тянется с наполнением текста непропорцинально
     border-radius: 0 20px 20px 0;
     margin-right: 50px;
   }
 }
 
 .country__title {
-  margin: 0 0 2px;
+  margin: 0 60px 2px 0;
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
@@ -99,12 +103,30 @@
   right: 22px;
   line-height: 30px;
 
+  &::before {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 10px;
+    background-image: url("../img/user.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    content: "";
+    opacity: 0.1;
+  }
+
   @media (min-width: $tablet-width) {
     position: relative;
     top: auto;
     right: auto;
     font-size: 20px;
-    padding-left: 28px;
+    // padding-left: 28px;
     line-height: 30px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+      margin-top: 5px;
+    }
   }
 }

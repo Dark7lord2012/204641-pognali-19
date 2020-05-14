@@ -1,1 +1,51 @@
-// Тут код для плашки уровней
+.level {
+  position: relative;
+  width: 61px;
+  height: 61px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  border-radius: 50%;
+  // border: 1px solid red;
+}
+
+.level__number {
+  display: block;
+  min-width: 60px;
+  margin: 12px auto 0;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+  color: $white;
+}
+
+.level__text {
+  display: block;
+  width: 31px;
+  margin: 0 auto;
+  padding-top: 2px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: normal;
+  text-align: center;
+  color: $white;
+  border-top: 1px solid $white;
+}
+
+.level__svg-border {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  fill: rgba($black, 0.5);
+  transform: rotate(-90deg);
+
+  circle {
+    stroke: $mango;
+    stroke-width: 3;
+  }
+}

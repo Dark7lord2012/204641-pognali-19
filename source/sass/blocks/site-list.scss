@@ -1,6 +1,5 @@
 .site-list {
-  outline: 1px solid green;
-  padding: 28px 0 0;
+  padding: 0;
   background-color: $white;
   color: $dark-blue-grey;
   list-style: none;
@@ -8,23 +7,23 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    align-content: center;
+    margin-top: 12px;
     margin-right: auto;
     padding: 0;
-    background-color: $dark-two;
+    background-color: transparent;
     color: $white;
   }
 }
 
 .site-list__item {
   a {
-    outline: 1px solid red;
     color: $dark-blue-grey;
     text-decoration: none;
     text-transform: uppercase;
   }
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 2px;
     text-align: left;
 
     a {
@@ -35,17 +34,38 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    margin: auto 20px;
+    align-self: center;
+    margin: 0;
 
     a {
+      position: relative;
+      align-self: center;
+      margin-right: 35px;
       font-size: 20px;
       line-height: 30px;
       color: $white;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        color: red;
+        content: attr(title);
+      }
+
+      &:hover,
+      &:focus {
+        color: $light-gold;
+      }
+
+      &:active {
+        color: rgba($light-gold, 0.3);
+      }
     }
 
     &:first-child::before {
       display: block;
-      margin: auto 50px auto 20px;
+      align-self: center;
+      margin: 0 45px 0 0;
       width: 60px;
       height: 2px;
       content: "";
