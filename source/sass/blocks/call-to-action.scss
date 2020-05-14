@@ -3,7 +3,7 @@
   z-index: 1;
   margin-top: -30px;
   padding-top: 100px;
-  padding-bottom: 28px;
+  padding-bottom: 26px;
   color: $white;
   background-color: $dark-blue-grey;
   border-radius: 0 0 30px 30px;
@@ -155,7 +155,6 @@
 }
 
 .call-to-action__contacts-list {
-  outline: 1px solid red;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -170,7 +169,6 @@
   display: flex;
   align-self: center;
   align-content: center;
-  outline: 1px solid green;
   min-height: 45px;
   box-sizing: border-box;
 }
@@ -201,7 +199,6 @@
 
 .call-to-action__phone-svg,
 .call-to-action__email-svg {
-  outline: 1px solid red;
   background-color: $dark-blue-grey-two;
   width: 18px;
   height: 18px;

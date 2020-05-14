@@ -34,8 +34,11 @@
 }
 
 .btn-rectangle--bordered {
+  min-height: 62px;
+  padding: 20px 20px 19px;
   background-color: transparent;
   border: 3px solid black;
+  box-sizing: border-box;
 }
 
 .btn-rectangle__arrow {
