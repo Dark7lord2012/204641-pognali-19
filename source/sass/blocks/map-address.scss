@@ -1,11 +1,13 @@
 .map-address {
-  position: relative;
   margin-top: -30px;
-  margin-bottom: 302px;
-  padding-top: 60px;
+  padding-top: 62px;
   padding-bottom: 30px;
   background-color: $light-gold;
   border-radius: 0 0 30px 30px;
+
+  .wrapper {
+    position: relative;
+  }
 
   @media (min-width: $tablet-width) {
     .wrapper {
@@ -16,15 +18,31 @@
 }
 
 .map-address__address {
-  margin-top: 3px;
-  margin-bottom: 30px;
-  padding-left: 60px;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 32px;
   padding-right: 30px;
+  padding-left: 60px;
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
   text-transform: uppercase;
   color: $dark-blue-grey;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 45px;
+    height: 45px;
+    content: "";
+    background-color: $dark-blue-grey-two;
+    border-radius: 50%;
+    background-image: url("../img/contacts-location.svg");
+    background-size: 14px 22px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
@@ -47,8 +65,8 @@
 }
 
 .map-address__map {
-  outline: 1px solid red;
   position: absolute;
+  border: 1px solid red;
   top: -30px;
   left: 0;
   right: 0;
