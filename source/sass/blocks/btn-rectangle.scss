@@ -39,6 +39,11 @@
   background-color: transparent;
   border: 3px solid black;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    // min-height: 81px;
+    padding: 26px 30px 26px 34px;
+  }
 }
 
 .btn-rectangle__arrow {
