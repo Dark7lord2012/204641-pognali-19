@@ -87,10 +87,8 @@
   text-align: left;
 
   @media (min-width: $desktop-width) {
-    width: auto;
     box-sizing: border-box;
     width: 324px;
-    // margin-left: 148px;
   }
 }
 

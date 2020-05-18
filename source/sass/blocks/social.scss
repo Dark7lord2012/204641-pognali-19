@@ -46,7 +46,7 @@
   @media (min-width: $tablet-width) {
     width: 31px;
     height: 16px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-left: 9px;
   }
 }
@@ -85,7 +85,7 @@
 
 .social--footer {
   padding-left: 0;
-  margin: 0px 0 16px;
+  margin: 0 0 16px;
 
   .social__item {
     align-self: center;

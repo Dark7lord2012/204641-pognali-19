@@ -111,7 +111,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 300px;
     outline: 1px solid red;
     width: calc(100% - 242px);
     padding-right: 0;
@@ -211,9 +210,6 @@
     line-height: 20px;
     margin-left: -8px;
     color: $light-navy;
-  }
-
-  @media (min-width: $tablet-width) {
   }
 }
 
