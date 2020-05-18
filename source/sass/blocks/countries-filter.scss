@@ -1,9 +1,9 @@
 .countries-filter {
   z-index: 0;
-  outline: 2px solid #00ff00;
   margin-top: -20px;
-  padding: 40px 0 0;
+  padding: 36px 0 27px;
   background-color: $pale-grey-four;
+  border-radius: 0 0 20px 20px;
 
   .wrapper {
     display: flex;
@@ -16,22 +16,34 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: -60px;
-    padding-top: 80px;
+    padding-top: 117px;
+    padding-bottom: 73px;
+    border-radius: 0 0 60px 60px;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
+
+    .wrapper {
+      width: 100%;
+      justify-content: flex-start;
+    }
   }
 }
 
 .countries-filter__title {
+  max-width: calc(100% - 50px); // для переполнения
   margin-top: 0;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 27px;
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
   color: $dark-blue-grey;
   text-transform: uppercase;
+  background-image: url("../img/filter.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-size: 15px 11px;
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -40,8 +52,11 @@
   @media (min-width: $desktop-width) {
     order: -1;
     display: inline;
+    margin-left: 20px;
+    padding-left: 44px;
     font-size: 20px;
     line-height: 24px;
+    background-size: 23px 15px;
   }
 }
 
@@ -56,17 +71,35 @@
 .countries-filter__btn-toggle {
   width: 12px;
   height: 12px;
+  margin-top: 4px;
+  margin-right: 7px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $dark-blue-grey;
   background-color: transparent;
   border: none;
   background-image: url("../img/filter-close.svg");
+  background-size: 12px;
   background-repeat: no-repeat;
   background-position: center center;
 
   @media (min-width: $tablet-width) {
     width: auto;
     height: auto;
-    padding-right: 40px;
+    margin: -1px 38px 0 0;
+    padding-right: 82px;
+    padding-left: 0;
     background-position: right center;
+    box-sizing: border-box;
+    background-size: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: start;
+    margin-left: auto;
+    margin-right: 67px;
   }
 }
 
@@ -80,8 +113,8 @@
 
 .countries-filter__continents {
   width: 100%;
-  margin: 0;
-  padding: 0 20px;
+  margin: 17px 0 0;
+  padding: 0 25px;
   outline: 1px solid #0000ff;
   list-style: none;
 
@@ -93,13 +126,37 @@
   @media (min-width: $tablet-width) {
     order: -1;
     display: flex;
+    flex-wrap: wrap;
+    max-width: 65%;
+    margin: 0;
+    padding-left: 34px;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
     width: auto;
+    align-self: start;
+    max-width: 60%;
+    padding-left: 33px;
   }
 }
 
 .countries-filter__continent {
   @media (min-width: $tablet-width) {
-    margin-right: 40px; // временно, ломается сетка при ширине около 1200px
+    margin-right: 29px;
+
+    &:first-child {
+      margin-right: 25px;
+    }
+  }
+}
+
+.countries-filter__continent + .countries-filter__continent {
+  margin-top: 5.5px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
   }
 }
 
@@ -107,7 +164,11 @@
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
-  color: $dark-blue-grey;
+  color: rgba($dark-blue-grey, 0.3);
+
+  &--active {
+    color: $dark-blue-grey;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -119,13 +180,15 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin: 0 20px;
-  padding: 0;
+  margin: 20.5px 25px 0px;
+  padding: 0 0 0 0px;
   list-style: none;
 
   @media (min-width: $tablet-width) {
-    width: 70%;
-    margin: 0;
+    width: 65%;
+    margin: 46px 0 0;
+    padding: 0 12px;
+    outline: 1px solid green;
   }
 
   @media (min-width: $desktop-width) {
@@ -142,10 +205,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  width: 45px;
-  height: 42px;
+  width: 44px;
+  height: 41px;
   font-size: 14px;
   line-height: 18px;
+  font-weight: medium;
   color: $dark-slate-blue;
   text-transform: uppercase;
   border: 1px solid $cloudy-blue;
@@ -153,10 +217,12 @@
 
   @media (min-width: $tablet-width) {
     // margin: 22px;
-    width: 60px;
-    height: 60px;
+    width: 77.5px;
+    height: 77px;
+    margin-bottom: 6px;
     font-size: 60px;
     line-height: 24px;
+    font-weight: bold;
     color: rgba($dark-blue-grey, 0.2);
     border: none;
     background-color: transparent;
@@ -174,20 +240,33 @@
 }
 
 .countries-filter__countries-lists {
-  margin: 0;
+  margin: 12px 0 0;
   padding: 0;
   list-style: none;
   outline: 1px solid orange;
 
+  @media (min-width: $tablet-width) {
+    width: 31%;
+    margin-top: 54px;
+    padding-left: 3px;
+    box-sizing: border-box;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     width: 100%;
+    padding: 0 30px 0 35px;
+    flex-wrap: wrap;
   }
 }
 
 .countries-filter__countries-lists-item {
   @media (min-width: $desktop-width) {
     width: 20%;
+    padding-top: 16.5px;
+    margin-bottom: 55px; // временно, не все попадает по макету (страны, буквы)
+    outline: 1px solid red;
+    box-sizing: border-box;
   }
 }
 
@@ -195,7 +274,7 @@
   display: none;
   width: 100%;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 26px;
   list-style: none;
   outline: 1px solid #0000ff;
 
@@ -205,11 +284,16 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     display: block;
   }
+}
+
+.countries-filter__country + .countries-filter__country {
+  margin-top: 0.5px;
 }
 
 .countries-filter__country-link {
@@ -234,17 +318,24 @@
 
   @media (min-width: $desktop-width) {
     display: block;
+    margin-top: 0;
+    margin-bottom: 52px;
   }
 }
 
 .countries-filter__btn-close {
   width: 100%;
+  min-height: 40px;
+  margin-top: 29px;
+  padding: 5px;
   font-size: 17px;
   line-height: 30px;
   color: $dark-two;
   text-transform: uppercase;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    margin: 20px;
+    min-height: 100px;
+    margin: 17px 0 0;
   }
 }
