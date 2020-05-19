@@ -1,0 +1,41 @@
+.controls-line {
+  position: relative;
+  // outline: 1px solid white;
+  width: 100%;
+  height: 10px;
+  height: 5px;
+  margin: 20px 0;
+}
+
+.controls-line__scale {
+  width: 100%;
+  transform: translateY(50%);
+  height: 2px;
+  background-color: rgba($dark-slate-blue, 0.2);
+}
+
+.controls-line__bar {
+  width: auto;
+  height: 2px;
+  background-color: $dark-slate-blue;
+  margin-left: 30%; // допустим это число означает начало диапазона
+  box-sizing: border-box;
+}
+
+.controls-line__toggle {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: $dark-slate-blue;
+  border-radius: 50%;
+
+  &--min {
+    left: 30%;
+  }
+
+  &--max {
+    left: 100%;
+  }
+}
