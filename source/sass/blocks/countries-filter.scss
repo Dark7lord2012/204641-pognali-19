@@ -223,6 +223,15 @@
     color: $dark-blue-grey;
   }
 
+  &:hover:not(.countries-filter__link--active),
+  &:focus:not(.countries-filter__link--active) {
+    color: rgba($dark-blue-grey, 0.6);
+  }
+
+  &:active:not(.countries-filter__link--active) {
+    color: $dark-blue-grey;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
