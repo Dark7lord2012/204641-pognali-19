@@ -60,6 +60,28 @@
       width: 15px;
       height: 17px;
     }
+
+    @media (min-width: $tablet-width) {
+      &--air {
+        width: 19px;
+        height: 21px;
+      }
+
+      &--bus {
+        width: 17px;
+        height: 21px;
+      }
+
+      &--bike {
+        width: 24px;
+        height: 21px;
+      }
+
+      &--walk {
+        width: 20px;
+        height: 21px;
+      }
+    }
   }
 }
 
@@ -70,11 +92,33 @@
   height: 32px;
   background-color: $white;
   border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
 }
 
 .transport-icons__checkbox:checked ~ .transport-icons__icon {
   path,
   ellipse {
     fill: $dark-slate-blue;
+  }
+}
+
+.transport-icons__checkbox:focus ~ .transport-icons__icon,
+.transport-icons__icon:hover {
+  path,
+  ellipse {
+    fill: rgba($dark-slate-blue-two, 0.7);
+  }
+}
+
+.transport-icons__checkbox:active ~ .transport-icons__icon {
+  background-color: $pale-grey-three;
+
+  path,
+  ellipse {
+    fill: rgba($dark-slate-blue-two, 0.7);
   }
 }

@@ -1,14 +1,25 @@
 .travelmate-filter {
-  padding: 24px 0;
+  padding: 24px 0 22px;
   margin: 24px 25px;
   background-color: $light-gold;
   border-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 45px 40px 40px;
+    padding: 35px 0px 40px;
+
+    .wrapper {
+      margin: 0 35px;
+    }
+  }
 
   @media (min-width: $desktop-width) {
     order: 1;
     align-self: flex-start;
     width: 285px;
-    margin: 0 60px 0 auto;
+    margin: 77px 60px 0 10px;
+    padding: 47px 12px;
+    box-sizing: border-box;
   }
 }
 
@@ -21,14 +32,20 @@
   color: #1d2e5b;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 39px;
+    margin-bottom: 29px;
     font-size: 30px;
     line-height: 30px;
+    border-bottom: 1px solid $macaroni-and-cheese;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+    border-bottom: none;
   }
 }
 
 .travelmate-filter__fieldset {
-  // outline: 1px solid grey;
-
   @media (min-width: $tablet-width) {
     display: flex;
   }
@@ -43,12 +60,80 @@
     transform: rotate(0deg);
   }
 
-  .travelmate-filter__checkbox-list {
+  .travelmate-filter__checkbox-list,
+  .travelmate-filter__transport-icons {
     display: none;
   }
 
-  .travelmate-filter__transport-icons {
-    display: none;
+  @media (min-width: $tablet-width) {
+    .travelmate-filter__checkbox-list,
+    .travelmate-filter__transport-icons {
+      display: flex;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .travelmate-filter__checkbox-list,
+    .travelmate-filter__transport-icons {
+      display: none;
+    }
+  }
+}
+
+.travelmate-filter__fieldset + .travelmate-filter__fieldset {
+  @media (min-width: $tablet-width) {
+    margin-top: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 13px;
+  }
+}
+
+.travelmate-filter__fieldset + .travelmate-filter__fieldset--level {
+  margin-top: 15px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
+  }
+}
+
+.travelmate-filter__fieldset--transport {
+  @media (min-width: $tablet-width) {
+    .travelmate-filter__header-fieldset {
+      margin-right: -2px;
+    }
+
+    .travelmate-filter__legend {
+      margin-top: 6px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .travelmate-filter__legend {
+      margin-top: 0px;
+    }
+  }
+}
+
+.travelmate-filter__fieldset--level {
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    padding-bottom: 35px;
+    border-bottom: 1px solid $macaroni-and-cheese;
+
+    .travelmate-filter__legend {
+      transform: translateY(8px);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+    border-bottom: none;
+
+    .travelmate-filter__legend {
+      transform: translateY(0px);
+    }
   }
 }
 
@@ -59,11 +144,18 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-self: center;
+    width: 80%;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: column;
+    width: 100%;
+    margin-top: 17px;
+    margin-bottom: 15px;
   }
 }
 
@@ -76,6 +168,13 @@
   @media (min-width: $tablet-width) {
     display: flex;
     align-self: center;
+    padding-top: 2px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 13px;
+    align-self: flex-start;
   }
 }
 
@@ -84,13 +183,23 @@
   justify-content: space-between;
   align-content: center;
   padding: 9px 0 10px;
-  // outline: 1px solid red;
   border-top: 1px solid $macaroni-and-cheese;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 20%;
+    padding: 0;
+    margin: 0 3px 0 0;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .travelmate-filter__legend {
-  align-self: center;
+  align-self: flex-start;
   margin: 0;
   font-size: 16px;
   line-height: 18px;
@@ -99,10 +208,28 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin: 20px;
+    margin: 0;
     font-size: 20px;
     line-height: 30px;
     font-weight: medium; // не работает?
+    transform: translateY(3px);
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translateY(1px);
+  }
+}
+
+// двоеточие
+.travelmate-filter__show-on-tablet {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
@@ -119,6 +246,26 @@
   border: none;
   background-color: transparent;
   transform: rotate(180deg);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+    align-self: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    align-self: center;
+  }
+}
+
+.travelmate-filter__checkbox-list-item {
+  @media (min-width: $tablet-width) {
+    width: 33%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .travelmate-filter__label-checkbox {
@@ -131,6 +278,21 @@
   font-weight: normal;
   color: $greyish-brown;
   box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    align-self: start;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .travelmate-filter__label-checkbox::before {
@@ -142,6 +304,13 @@
   background-color: $white;
   border-radius: 4px;
   transform: translateY(4px);
+
+  @media (min-width: $tablet-width) {
+    width: 24px;
+    height: 24px;
+    transform: translateY(5px);
+
+  }
 }
 
 .travelmate-filter__checkbox:checked + .travelmate-filter__tick {
@@ -156,10 +325,25 @@
   background-repeat: no-repeat;
   background-size: 9px;
   background-position: center center;
+
+  @media (min-width: $tablet-width) {
+    top: 11px;
+    width: 12px;
+    height: 12px;
+    background-size: 12px;
+  }
 }
 
 .travelmate-filter__checkbox-list-item + .travelmate-filter__checkbox-list-item {
   margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 12px;
+  }
 }
 
 .travelmate-filter__level-numbers {
@@ -170,7 +354,13 @@
   @media (min-width: $tablet-width) {
     order: 1;
     width: 150px;
-    margin: 20px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 14px;
   }
 }
 
@@ -191,8 +381,26 @@
   line-height: 15px;
   font-weight: medium;
   text-align: center;
+  letter-spacing: 1.5px;
   color: $dark-slate-blue;
   border: 1px solid $cloudy-blue;
+
+  &:hover,
+  &:focus {
+    border-color: $bluey-grey;
+    outline: none;
+  }
+
+  &:active {
+    border-color: $dark-two;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 46px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
 }
 
 .travelmate-filter__label-number:first-child {
@@ -226,16 +434,29 @@
 
 .travelmate-filter__controls-line {
   @media (min-width: $tablet-width) {
-    margin: 20px;
+    margin: 20px 61px 20px 0;
     align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
   }
 }
 
 .travelmate-filter__btn-show {
-  width: 100%;
-  font-size: 17px;
-  line-height: 30px;
-  font-weight: bold;
+  width: calc(100% + 10px);
+  margin: 7px -5px 0;
   color: $dark-two;
   text-transform: uppercase;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin: 35px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc(100% + 5px);
+    margin: 22px -5px 0 0;
+  }
 }

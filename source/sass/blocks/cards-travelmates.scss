@@ -1,6 +1,10 @@
 .cards-travelmates {
   margin: 0;
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 77px;
+  }
 }
 
 .cards-travelmates__list {
