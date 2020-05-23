@@ -17,7 +17,7 @@
     order: 1;
     align-self: flex-start;
     width: 285px;
-    margin: 77px 60px 0 10px;
+    margin: 77px 60px 80px 10px;
     padding: 47px 12px;
     box-sizing: border-box;
   }
@@ -295,43 +295,49 @@
   }
 }
 
-.travelmate-filter__label-checkbox::before {
+// .travelmate-filter__label-checkbox::before {
+//   display: inline-block;
+//   width: 18px;
+//   height: 18px;
+//   margin-right: 4px;
+//   content: "";
+//   background-color: $white;
+//   border-radius: 4px;
+//   transform: translateY(4px);
+
+//   @media (min-width: $tablet-width) {
+//     width: 24px;
+//     height: 24px;
+//     transform: translateY(5px);
+
+//   }
+// }
+
+.travelmate-filter__checkbox + .travelmate-filter__tick {
+  // position: absolute;
+  left: 5px;
+  top: 8px;
   display: inline-block;
   width: 18px;
   height: 18px;
-  margin-right: 4px;
-  content: "";
   background-color: $white;
+  content: "";
+  // background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-size: 9px;
+  background-position: center center;
   border-radius: 4px;
-  transform: translateY(4px);
 
   @media (min-width: $tablet-width) {
+    top: 11px;
     width: 24px;
     height: 24px;
-    transform: translateY(5px);
-
+    background-size: 12px;
   }
 }
 
 .travelmate-filter__checkbox:checked + .travelmate-filter__tick {
-  position: absolute;
-  left: 5px;
-  top: 8px;
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  content: "";
   background-image: url("../img/tick.svg");
-  background-repeat: no-repeat;
-  background-size: 9px;
-  background-position: center center;
-
-  @media (min-width: $tablet-width) {
-    top: 11px;
-    width: 12px;
-    height: 12px;
-    background-size: 12px;
-  }
 }
 
 .travelmate-filter__checkbox:focus + .travelmate-filter__tick {
