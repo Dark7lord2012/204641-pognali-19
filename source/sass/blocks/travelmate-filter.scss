@@ -5,7 +5,7 @@
   border-radius: 20px;
 
   @media (min-width: $tablet-width) {
-    margin: 45px 40px 40px;
+    margin: 45px 40px 34px;
     padding: 35px 0px 40px;
 
     .wrapper {
@@ -332,6 +332,10 @@
     height: 12px;
     background-size: 12px;
   }
+}
+
+.travelmate-filter__checkbox:focus + .travelmate-filter__tick {
+  opacity: 0.6;
 }
 
 .travelmate-filter__checkbox-list-item + .travelmate-filter__checkbox-list-item {

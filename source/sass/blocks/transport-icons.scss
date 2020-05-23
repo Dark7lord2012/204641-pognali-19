@@ -122,3 +122,22 @@
     fill: rgba($dark-slate-blue-two, 0.7);
   }
 }
+
+.transport-icons--travelmate {
+  .transport-icons__icon + .transport-icons__icon {
+    margin-left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    .transport-icons__icon + .transport-icons__icon {
+      margin-top: 10px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .transport-icons__icon + .transport-icons__icon {
+      margin-top: 0;
+      margin-left: 12px;
+    }
+  }
+}
