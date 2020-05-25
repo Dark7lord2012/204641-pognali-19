@@ -9,6 +9,21 @@
   border-radius: 50%;
 }
 
+.level--black-back {
+  .level__svg-border {
+    fill: rgba($black, 0.5);
+  }
+
+  .level__number {
+    color: $white;
+  }
+
+  .level__text {
+    color: $white;
+    border-top: 1px solid $white;
+  }
+}
+
 .level__number {
   display: block;
   min-width: 60px;
@@ -17,7 +32,7 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: bold;
-  color: $white;
+  color: $dark-two;
 }
 
 .level__text {
@@ -29,8 +44,8 @@
   line-height: 14px;
   font-weight: normal;
   text-align: center;
-  color: $white;
-  border-top: 1px solid $white;
+  color: $greyish-brown;
+  border-top: 1px solid $cloudy-blue;
 }
 
 .level__svg-border {
