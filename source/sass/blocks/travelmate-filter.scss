@@ -6,7 +6,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 45px 40px 34px;
-    padding: 35px 0px 40px;
+    padding: 35px 0 40px;
 
     .wrapper {
       margin: 0 35px;
@@ -111,7 +111,7 @@
 
   @media (min-width: $desktop-width) {
     .travelmate-filter__legend {
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 }
@@ -132,7 +132,7 @@
     border-bottom: none;
 
     .travelmate-filter__legend {
-      transform: translateY(0px);
+      transform: translateY(0);
     }
   }
 }

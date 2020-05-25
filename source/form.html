@@ -175,7 +175,12 @@
           <div class="wrapper">
             <h2 class="visually-hidden">Информация</h2>
             <p class="info__level level">
-              80 level
+              <svg class="level__svg-border" width="100%" height="100%" >
+                <!-- Как процентно задать линию пропорционально проценту? -->
+                <circle r="47%" cx="50%" cy="50%" stroke-dasharray="275%"></circle>
+              </svg>
+              <span class="level__number">80</span>
+              <span class="level__text">level</span>
             </p>
             <img src="img/demin-mobile@1x.jpg" alt="Петя Демин?" class="info__photo" width="100" height="100">
             <button class="info__btn-photo btn-round btn-round btn-round--pale" type="button">
