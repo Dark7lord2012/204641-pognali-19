@@ -39,22 +39,30 @@
 
     a {
       position: relative;
+      overflow: hidden;
       align-self: center;
       margin-right: 35px;
       font-size: 20px;
       line-height: 30px;
       color: $white;
 
-      &::after {
-        position: absolute;
-        bottom: 0;
-        color: red;
-        content: attr(title);
+      span {
+        position: relative;
+        display: inline-block;
+        transition: transform 0.3s;
       }
 
-      &:hover,
-      &:focus {
+      span::after {
+        position: absolute;
+        top: 100%;
+        left: 0;
         color: $light-gold;
+        content: attr(data-hover);
+      }
+
+      &:hover span,
+      &:focus span {
+        transform: translateY(-100%);
       }
 
       &:active {

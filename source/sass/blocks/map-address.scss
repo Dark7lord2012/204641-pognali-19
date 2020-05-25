@@ -1,39 +1,84 @@
 .map-address {
-  position: relative;
   margin-top: -30px;
-  margin-bottom: 302px;
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding-top: 62px;
+  padding-bottom: 35px;
   background-color: $light-gold;
   border-radius: 0 0 30px 30px;
 
+  .wrapper {
+    position: relative;
+  }
+
   @media (min-width: $tablet-width) {
+    margin-top: -60px;
+    padding: 127px 35px 85px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 118px 75px 60px;
+
     .wrapper {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
     }
   }
 }
 
 .map-address__address {
-  margin-top: 3px;
-  margin-bottom: 30px;
-  padding-left: 60px;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 32px;
   padding-right: 30px;
+  padding-left: 60px;
   font-size: 16px;
   line-height: 22px;
   font-weight: bold;
   text-transform: uppercase;
   color: $dark-blue-grey;
 
+  &::before {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 45px;
+    height: 45px;
+    content: "";
+    background-color: $dark-blue-grey-two;
+    border-radius: 50%;
+    background-image: url("../img/contacts-location.svg");
+    background-size: 14px 22px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
   @media (min-width: $tablet-width) {
+    padding-left: 93px;
+    margin-bottom: 63px;
     font-size: 28px;
     line-height: 28px;
+
+    &::before {
+      top: -20px;
+      width: 67px;
+      height: 67px;
+      background-size: 22px 32px;
+      background-position: center calc(50% + 2px);
+    }
   }
 
   @media (min-width: $desktop-width) {
     align-self: center;
-    margin: 0;
+    margin: 0 0 0 128px;
+    padding-left: 140px;
+
+    &::before {
+      top: -31px;
+      left: 19px;
+      width: 90px;
+      height: 90px;
+      background-size: 28px 43px;
+    }
   }
 }
 
@@ -41,14 +86,15 @@
   width: 100%;
   text-align: left;
 
-  @media (min-width: $tablet-width) {
-    width: auto;
+  @media (min-width: $desktop-width) {
+    box-sizing: border-box;
+    width: 324px;
   }
 }
 
 .map-address__map {
-  outline: 1px solid red;
   position: absolute;
+  border: 1px solid red;
   top: -30px;
   left: 0;
   right: 0;

@@ -228,7 +228,8 @@
       background-color: $mango;
     }
 
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
       background-color: $dusty-orange;
     }
   }
@@ -240,7 +241,8 @@
       background-color: $mango-two;
     }
 
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
       background-color: $mango;
     }
   }

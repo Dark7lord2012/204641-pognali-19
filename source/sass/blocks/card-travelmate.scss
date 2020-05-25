@@ -1,26 +1,21 @@
 .card-travelmate {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   background-color: $white;
-  padding: 20px;
+  padding: 14px 20px 20px;
   color: $dark-slate-blue;
   border-radius: 20px;
 
   @media (min-width: $tablet-width) {
+    display: flex;
     padding: 35px;
-    justify-content: flex-start;
-    align-content: flex-start;
   }
 
   @media (min-width: $desktop-width) {
-    align-content: center;
+    // align-content: center;
     box-sizing: border-box;
     width: 950px;
     min-height: 285;
-    padding-left: 285px;
-    padding-top: 50px;
+    padding: 0;
     column-count: 2;
     column-gap: 20px;
     column-rule-style: solid;
@@ -31,25 +26,92 @@
   margin-top: 10px;
 }
 
+.card-travelmate__content {
+  outline: 1px solid pink;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% - 223px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc(100% - 319px);
+    margin: 0;
+    padding: 48px 44px 42px 56px;
+    box-sizing: border-box;
+  }
+}
+
+.card-travelmate__header {
+  outline: 1px solid red;
+  display: flex;
+  align-self: start;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 70px;
+  padding-left: 85px;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 80%;
+    padding-left: 0;
+    padding-right: 60px;
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    width: 53%;
+    margin-bottom: 18px;
+    padding-right: 0;
+  }
+}
+
 .card-travelmate__title {
-  margin: 0;
-  margin-right: auto;
+  width: 70%;
+  margin: -1px 0 0;
   font-size: 20px;
   line-height: 20px;
   font-weight: bold;
 
   @media (min-width: $tablet-width) {
-    order: 0;
-    margin-left: 258px;
+    width: calc(100% - 60px);
     margin-right: 0;
     font-size: 30px;
     line-height: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    order: 1;
     align-self: flex-start;
+    width: 100%;
     margin-left: 0;
+  }
+}
+
+.card-travelmate__status {
+  position: relative;
+  top: 8px;
+  right: 2px;
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  background-color: $salmon;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    top: auto;
+    right: auto;
+    margin: 10px 23px 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    left: -46px;
   }
 }
 
@@ -59,24 +121,26 @@
 }
 
 .card-travelmate__img-link {
-  order: -1;
+  // order: -1;
+  position: absolute;
   display: block;
   width: 70px;
   height: 70px;
-  margin-right: 15px;
+  margin-right: 14px;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
+    position: static;
     width: 190px;
     height: 190px;
+    margin-right: 33px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 0;
-    left: 0;
     width: 285px;
     height: 285px;
     border-radius: 20px 0 0 20px;
+    border: 1px solid red;
+    margin-right: 0;
   }
 }
 
@@ -96,12 +160,29 @@
   }
 }
 
-.card-travelmate__btn-like {
+.card-travelmate__like-wrapper {
   position: absolute;
   top: 54px;
-  left: 67px;
+  left: 66px;
+  display: flex;
+  outline: 1px solid blue;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    max-width: 90%;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+    max-width: 30%;
+  }
+}
+
+.card-travelmate__btn-like {
+  align-self: center;
   width: 31px;
   height: 31px;
+  margin-right: 7px;
   padding: 0;
   background-color: $very-light-pink-two;
   border: none;
@@ -112,13 +193,16 @@
     position: static;
     top: auto;
     left: auto;
+    align-self: flex-start;
   }
 }
 
 .card-travelmate__likes {
-  position: absolute;
-  top: 45px;
-  left: 105px;
+  // position: absolute;
+  // top: 45px;
+  // left: 105px;
+  align-self: center;
+  margin: 0;
   font-size: 14px;
   line-height: 21px;
   font-weight: bold;
@@ -129,48 +213,119 @@
     position: static;
     top: auto;
     left: auto;
+    max-width: 80%;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 50%;
   }
 }
 
-.card-travelmate__status {
-  position: absolute;
-  top: 10px;
-  right: 22px;
-  width: 6px;
-  height: 6px;
-  background-color: $salmon;
-  border-radius: 50%;
+.card-travelmate__transport-n-level {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  outline: 1px solid green;
+  // padding: 2px; // временно
+  margin-bottom: 14px;
 
   @media (min-width: $tablet-width) {
-    position: static;
-    top: auto;
-    right: auto;
-    margin: 10px 20px 15px;
+    position: relative;
+    top: -145px; // не стабильно при заполнении заголовка и тегов
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-bottom: -115px;
   }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    top: 0;
+    width: 50%;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}
+
+.card-travelmate__countries-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  outline: 1px solid blue;
+  padding: 0 5px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    order: 4;
+    width: calc(100% + 293px);
+    margin-left: -258px;
+    margin-right: -35px;
+    border: 1px solid red;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    width: 47%;
+    margin: 0;
+  }
+}
+
+.card-travelmate__transport-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  flex-grow: 1;
+  outline: 1px solid blue;
+  padding: 0 5px;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+  }
+}
+
+.card-travelmate__level-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  outline: 1px solid blue;
 }
 
 .card-travelmate__tags,
 .card-travelmate__countries-title,
-.card-travelmate__transport-title {
+.card-travelmate__transport-title,
+.card-travelmate__level-title {
+  margin: 0;
+  display: block;
   font-size: 15px;
   line-height: 18px;
   font-weight: normal;
   color: $greyish-brown;
+  text-transform: lowercase;
 }
 
 .card-travelmate__tags {
+  outline: 1px solid blue;
+  width: 100%;
+  padding: 0 3px;
+  margin-bottom: 13px;
+
   @media (min-width: $tablet-width) {
     order: 2;
     width: 250px;
-    margin-left: 258px;
     font-size: 20px;
     line-height: 24px;
+    text-transform: none;
   }
 
   @media (min-width: $desktop-width) {
-    width: 300px;
-    margin-left: 40px;
-    margin-right: 120px; // сомнительно
+    width: 50%;
+    margin-top: -73px;
+    margin-left: 0;
   }
 }
 
@@ -180,9 +335,7 @@
 }
 
 .card-travelmate__countries-title {
-  @media (min-width: $tablet-width) {
-    order: 7;
-  }
+  margin-bottom: 18px;
 
   @media (min-width: $desktop-width) {
     display: none;
@@ -204,12 +357,13 @@
     order: 1;
     flex-direction: column;
     width: auto;
-    margin-left: auto;
-    margin-bottom: 30px;
+    margin-left: 40px;
   }
 }
 
 .card-travelmate__transport-title {
+  margin-bottom: 20px;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
@@ -221,6 +375,11 @@
   font-size: 15px;
   line-height: 18px;
   font-weight: normal;
+  text-transform: uppercase;
+  background-image: url("https://via.placeholder.com/26x18");
+  background-size: 26px 18px;
+  background-repeat: no-repeat;
+  background-position: left top;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -228,16 +387,19 @@
   }
 }
 
+.card-travelmate__country + .card-travelmate__country {
+  margin-top: 10px;
+}
+
 .card-travelmate__transport-list {
   outline: 1px solid red;
   display: flex;
+  align-self: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    right: 39px;
     flex-direction: column;
   }
 
@@ -256,6 +418,14 @@
   border-radius: 50%;
 }
 
+.card-travelmate__level-title {
+  margin-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .card-travelmate__level {
   outline: 1px solid red;
   display: block;
@@ -265,25 +435,47 @@
 
   @media (min-width: $tablet-width) {
     order: 6;
+    width: 60px;
+    height: 60px;
     margin-left: auto;
   }
 }
 
-.card-travelmate__btn-call {
+.card-travelmate__call {
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    order: 2;
+    max-width: 90%;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 50%;
+  }
+}
+
+.card-travelmate__btn-call {
+  display: block;
+  width: 100%;
+  padding: 5px 40px;
   font-size: 17px;
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
   color: $dark-two;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    order: 3;
+    order: -1;
     width: auto;
-    margin-left: 255px;
+    max-width: 90%;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 55px;
+    max-width: 70%;
+    align-self: center;
   }
 }

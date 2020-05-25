@@ -1,27 +1,67 @@
 .copyright {
   display: flex;
-  min-height: 62px;
+  min-height: 61px;
   align-content: center;
   justify-content: space-between;
   border-top: 1px solid rgba(black, 0.05);
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
+    border-top: none;
     border: none;
+    margin-bottom: 24px;
   }
 }
 
 .copyright__text {
+  margin-bottom: 4px;
   align-self: center;
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 2px;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 4px;
+  }
 }
 
 .copyright__link {
   align-self: center;
   width: 27px;
   height: 34px;
-  background-image: url("../img/htmlacademy.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+  // background-image: url("../img/htmlacademy.svg");
+  // background-repeat: no-repeat;
+  // background-position: center center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 2px;
+  }
+}
+
+.copyright__svg {
+  border: 1px solid red;
+
+  path {
+    fill: $dark-blue-grey;
+  }
+
+  &:hover,
+  &:focus {
+    path {
+      fill: rgba($dark-blue-grey, 0.6);
+    }
+  }
+
+  &:active {
+    path {
+      fill: rgba($dark-blue-grey, 0.3);
+    }
+  }
 }

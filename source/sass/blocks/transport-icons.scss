@@ -1,12 +1,12 @@
 .transport-icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 0;
   list-style: none;
 }
 
 .transport-icons__icon {
-  outline: 1px solid orange;
   min-width: 17px;
   height: 25px;
   // background-color:  // что за цвет?
@@ -26,4 +26,118 @@
 
 .transport-icons__icon + .transport-icons__icon {
   margin-left: 14px;
+}
+
+.transport-icons--checkboxes {
+  justify-content: flex-start;
+
+  .transport-icons__icon {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 15px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+
+    &--air {
+      width: 14px;
+      height: 16px;
+    }
+
+    &--bus {
+      width: 13px;
+      height: 16px;
+    }
+
+    &--bike {
+      width: 19px;
+      height: 17px;
+    }
+
+    &--walk {
+      width: 15px;
+      height: 17px;
+    }
+
+    @media (min-width: $tablet-width) {
+      &--air {
+        width: 19px;
+        height: 21px;
+      }
+
+      &--bus {
+        width: 17px;
+        height: 21px;
+      }
+
+      &--bike {
+        width: 24px;
+        height: 21px;
+      }
+
+      &--walk {
+        width: 20px;
+        height: 21px;
+      }
+    }
+  }
+}
+
+.transport-icons__label-checkbox {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-color: $white;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+.transport-icons__checkbox:checked ~ .transport-icons__icon {
+  path,
+  ellipse {
+    fill: $dark-slate-blue;
+  }
+}
+
+.transport-icons__checkbox:focus ~ .transport-icons__icon,
+.transport-icons__icon:hover {
+  path,
+  ellipse {
+    fill: rgba($dark-slate-blue-two, 0.7);
+  }
+}
+
+.transport-icons__checkbox:active ~ .transport-icons__icon {
+  background-color: $pale-grey-three;
+
+  path,
+  ellipse {
+    fill: rgba($dark-slate-blue-two, 0.7);
+  }
+}
+
+.transport-icons--travelmate {
+  .transport-icons__icon + .transport-icons__icon {
+    margin-left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    .transport-icons__icon + .transport-icons__icon {
+      margin-top: 10px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    .transport-icons__icon + .transport-icons__icon {
+      margin-top: 0;
+      margin-left: 12px;
+    }
+  }
 }

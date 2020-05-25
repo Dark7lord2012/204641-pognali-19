@@ -7,7 +7,6 @@
   flex-direction: column;
   align-self: center;
   border-radius: 50%;
-  // border: 1px solid red;
 }
 
 .level__number {
@@ -41,7 +40,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  fill: rgba($black, 0.5);
+  fill: none;
   transform: rotate(-90deg);
 
   circle {

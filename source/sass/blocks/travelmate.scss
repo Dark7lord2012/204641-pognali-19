@@ -31,7 +31,7 @@
 
 .travelmate__name {
   position: relative;
-  margin: 24px 0 15px;
+  margin: 13px 0 15px;
   font-size: 21px;
   line-height: 21px;
   font-weight: bold;
@@ -91,15 +91,20 @@
 }
 
 .travelmate__countries {
-  position: absolute;
-  top: 258px;
-  right: 50%;
-  transform: translateX(50%);
+  // position: absolute;
+  // top: 258px;
+  // right: 50%;
+  // transform: translateX(50%);
+  order: -1;
+  align-self: center;
   outline: 1px solid red;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-width: 250px;
   padding: 0;
-  margin: 0;
+  margin: -12px 0 0;
   list-style: none;
 
   @media (min-width: $tablet-width) {
@@ -120,9 +125,9 @@
 }
 
 .travelmate__transport-list {
-  margin-bottom: 18px;
+  margin-bottom: 19px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 26px;
   }
 }
